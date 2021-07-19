@@ -37,7 +37,7 @@ bss=orientation.byMiller([1,6,8],[2,1,1],CS,SS);
 bsg=orientation.byMiller([0,1,1],[5,1,1],CS,SS);
 tcu=orientation.byMiller([5,5,2],[1,1,5],CS,SS);
 cube=orientation.byMiller([1,0,0],[0,1,0],CS,SS);
-basal=orientation.byEuler(00*degree,90*degree,00*degree,CS,SS);
+basal=orientation.byEuler(00*degree,00*degree,00*degree,CS,SS);
 % create an EBSD variable containing the data
 % odf = ODF.load(fname,CS,SS,'density','kernel',psi,'resolution',2*degree,...
 %   'interface','generic',...

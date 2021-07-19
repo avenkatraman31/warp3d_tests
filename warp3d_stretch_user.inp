@@ -82,6 +82,17 @@
       theta_0 0.01 voce_m 1.0 tau_v 5000 tau_y 205.0,
       gamma_bar 4.0e-05
 !
+ crystal 4
+      properties slip_type hcp18 elastic_type ti6242,
+      C11 143500 C12 72500 C13 65400 C33 164900,
+      C44 32100 C55 32100,
+      hardening user,
+      cp_005 120.0 cp_006 168.0 cp_007 331.0 cp_008 250.0,
+      cp_009 330.0 cp_010 220.0 cp_011 270.0 cp_012 200.0,
+      cp_013 10.0 cp_014 50.0 cp_015 620.0 cp_016 50.0,
+      cp_017 0.0 cp_018 0.0 cp_019 280.0 cp_020 0.0,
+      cp_021 20.0
+!
  material voce_creep
       properties cp  rho 0.0 angle_convention kocks,
       n_crystals 25 angle_type degrees,
@@ -89,10 +100,17 @@
       orientation_input file filename 'angles.inp',
       debug off tolerance 1.0E-10
 !
- number nodes 10648 elements 9261
+ material user_tensile
+      properties cp  rho 0.0 angle_convention kocks,
+      n_crystals 25 angle_type degrees,
+      crystal_input single crystal_type 1,
+      orientation_input file filename 'angles.inp',
+      debug off tolerance 1.0E-10
+!
+ number nodes 1331 elements 1000
 !
  elements
-   1-9261 type l3disop linear,
+   1-1000 type l3disop linear,
 !   material builtin_creep,   $ uncomment/comment for desired material
     material voce_creep,
           order 2x2x2 bbar short center
