@@ -108,11 +108,11 @@ if __name__=="__main__":
     asin=arcsin
     acos=arccos
     #Defining number of elements, no. of nodes, domain size, indenter radius , domain discretization
-    ndim=21#int(sys.argv[1])
+    ndim=10#int(sys.argv[1])
     defmode=0
     totalstrain=0.5
     timesteps=101
-    domain=2.1#float(sys.argv[2])
+    domain=1#float(sys.argv[2])
     nnode=np.copy(ndim)+1
     domain_discrete=np.linspace(0,domain,nnode)
     #Creating 3-D mesh grid of points and retrieving nodeset and elset
