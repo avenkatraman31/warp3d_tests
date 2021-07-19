@@ -102,9 +102,9 @@
 !
  material user_tensile
       properties cp  rho 0.0 angle_convention kocks,
-      n_crystals 25 angle_type degrees,
+      n_crystals 1 angle_type degrees,
       crystal_input single crystal_type 1,
-      orientation_input file filename 'angles.inp',
+      orientation_input file filename 'EulerAngles.txt',
       debug off tolerance 1.0E-10
 !
  number nodes 1331 elements 1000
