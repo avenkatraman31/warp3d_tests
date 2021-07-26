@@ -1,0 +1,142 @@
+    *******************************************************************
+    **                                                               **
+    **                                                               **
+    **   W       W    AAAAA    RRRRRR    PPPPPP       33333  DDDD    **
+    **   W       W   A     A   R     R   P     P     3     3 D   D   **
+    **   W       W   A     A   R     R   P     P           3 D    D  **
+    **   W       W   A     A   R     R   P     P           3 D    D  **
+    **   W   W   W   AAAAAAA   RRRRRR    PPPPPP  ----  3333  D    D  **
+    **   W   W   W   A     A   R RR      P                 3 D    D  **
+    **   W   W   W   A     A   R   RR    P           3     3 D   D   **
+    **    WWW WWW    A     A   R     RR  P            33333  DDDD    **
+    **                                                               **
+    **     Windows 10 (Intel Fortran)     -rel-    Release:  18.3.0  **
+    **     Code Build Number: 4200                                   **
+    **     Built on: May 17 2021 15:52:57                            **
+    **     University of Illinois @ U-C.    Civil & Env Engineering  **
+    **     Today: Mon Jul 26 07:42:38 2021                           **
+    **                                                               **
+    **     NOTICE:  Use of Program Implies Agreement with Terms &    **
+    **              Conditions Set Forth in File 'license_agreement' **
+    **              Enter the Command 'license' to Display Text      **
+    **                                                               **
+    **     Limits (nodes, elements): none as of 17.9.3               **
+    **                                                               **
+    *******************************************************************
+       ! Created by 'Not real Engineering'
+       ! Author: Shank S. Kulkarni
+       ! 
+        structure bar
+       ! 
+        crystal 1
+             properties slip_type bcc elastic_type isotropic,
+             hardening voce,
+             e 210000 nu 0.3 harden_n 5,
+             alter_mode on,
+             theta_0 500.0 voce_m 1.0 tau_v 50000 tau_y 140.0,
+             gamma_bar 4.0e-05
+       ! 
+        crystal 2
+             properties slip_type hcp18 elastic_type ti6242,
+             hardening djgm,
+             C11 143500 C12 72500 C13 65400 C33 164900,
+             C44 32100 C55 32100,
+             gam_1 0.12 gam_4 0.12 gam_7 0.12,
+             g0_1 68.08 g0_4 54.46 g0_7 163.4,
+             m_1 0.2 m_4 0.2 m_7 0.2,
+             h0_1 7.81 h0_4 16.2 h0_7 48.7,
+             r_1 0.15 r_4 0.29 r_7 0.29,
+             gt_1 18.75 gt_4 12.5 gt_7 56.25,
+             n_1 0.14 n_4 0.15 n_7 0.15
+       ! 
+        crystal 3
+             properties slip_type hcp30 elastic_type ti6242,
+
+ >>>>> error: a high level command is expected. continue
+              scanning until one is encountered.
+
+             hardening djgm,
+             C11 143500 C12 72500 C13 65400 C33 164900,
+             C44 32100 C55 32100,
+             gam_1 0.12 gam_4 0.12 gam_7 0.12,
+             g0_1 68.08 g0_4 54.46 g0_7 163.4,
+             m_1 0.2 m_4 0.2 m_7 0.2,
+             h0_1 7.81 h0_4 16.2 h0_7 48.7,
+             r_1 0.15 r_4 0.29 r_7 0.29,
+             gt_1 18.75 gt_4 12.5 gt_7 56.25,
+             n_1 0.14 n_4 0.15 n_7 0.15
+       ! 
+        material cp_option_1
+         properties cp alpha 0.0 rho 0 angle_convention kocks,
+         n_crystals 2 crystal_input single crystal_type 3,
+         angle_type degrees,
+         orientation_input single angles 90.0 90.0 0.0,
+         tolerance 1.0E-10
+       ! 
+        number of nodes 12 elements 2
+       ! 
+        elements
+        1-2 type l3disop linear material cp_option_1,
+            order 2x2x2 bbar short
+       ! 
+        coordinates
+             1  0.0 0.0 0.0
+             2  1.0 0.0 0.0
+             3  0.0 1.0 0.0
+             4  1.0 1.0 0.0
+             5  0.0 2.0 0.0
+             6  1.0 2.0 0.0
+             7  0.0 0.0 1.0
+             8  1.0 0.0 1.0
+             9  0.0 1.0 1.0
+            10  1.0 1.0 1.0
+            11  0.0 2.0 1.0
+            12  1.0 2.0 1.0
+       ! 
+        incidences
+          1     1   2   4   3   7   8  10   9
+          2     3   4   6   5   9  10  12  11
+       ! 
+        blocking automatic
+
+>> Maximum element-to-node connectivity:   2 @ node:       3
+
+
+        output model flat patran convention text file "warp3d_results"
+>> Check element blocking ...
+     ... Elements have scalar blocking
+
+
+
+ >>>>>> WARNING:  Specified model description file already exists. 
+                  File overwritten.
+ >>>>>> Model description file: warp3d_results.text
+ >>>>>> Model description file completed
+        constraints
+           1 2 7 8 u 0 v 0 w 0
+           5 6 11 12 v 0.001
+       ! 
+        loading test
+         nonlinear
+           step 1-50 constraints 1.0
+       ! 
+       nonlinear analysis parameters
+          solution technique sparse direct
+          maximum iterations 5 $ newton
+          minimum iterations 1
+          convergence test norm res tol 0.01
+          time step 1.0
+       ! 
+        output commands use file "get_output.inp" ,
+        after steps 1-50 by 1
+        compute displacements for loading test step 50
+
+ >>>>> Messages before first step:
+ >>         Warnings:         0
+ >>         Errors:           1
+ >>         Fatal Errors:     0
+
+
+ >>>>> Errors Prevent Analysis.....
+ >>    Job Terminated
+
