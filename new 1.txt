@@ -1,0 +1,72 @@
+!
+ crystal 4
+      properties slip_type hcp18 elastic_type ti6242,
+      C11 143500 C12 72500 C13 65400 C33 164900,
+      C44 32100 C55 32100,
+      hardening avoche,
+      cp_001 3.5E-04 cp_002 3.5E-04,
+      cp_003 1.0E-04 cp_004 1.0E-04, 
+      cp_005 120.0 cp_006 168.0 cp_007 331.0 cp_008 250.0,
+      cp_009 330.0 cp_010 220.0 cp_011 270.0 cp_012 200.0,
+      cp_013 10.0 cp_014 50.0 cp_015 620.0 cp_016 50.0,
+      cp_017 0.0 cp_018 0.0 cp_019 280.0 cp_020 0.0,
+      cp_021 20.0
+
+       elseif(  matchs_exact('twin') ) then
+          if( .not. label(dumi) ) then
+                call errmsg(5,dumi,'twin',dumr,dumd)
+          else
+                lab = ' '
+                call entits(lab,nc)
+                if( lab(1:nc) .eq. 'yes') then
+                   c_array(cnum)%twin = .true.
+                elseif( lab(1:nc) .eq. 'no') then
+                   c_array(cnum)%twin = .true.
+                else
+                   call errmsg(364,dumi,dums,dumr,dumd)
+                end if
+          end if
+		  
+		  call mm10_init_cc_twin_props (cc_props,cc_props_twin,variant)
+      subroutine mm10_init_cc_twin_props( cc_props,cc_props_twin,variant )
+      use mm10_defs
+      use mm10_constants
+      implicit none
+      include 'include_sig_up'
+      integer :: variant
+      type(crystal_props) :: cc_props,cc_props_twin
+	  
+      call mm10_copy_cc_hist( crys_no, span, history_n(iloop,1),
+     &         work_gradfe,  work_R, ! both readonly,
+     &         cc_props, cc_n )
+      call mm10_copy_cc_twin_hist( crys_no, span, history_n(iloop,1),
+     &         work_gradfe,  work_R, ! both readonly,
+     &         cc_props_twin, cc_n_twin )
+	 
+      call mm10_setup_np1(
+     &        work_vec1, work_vec2, ! read only in subroutine
+     &        local_work%dt, gp_temps(iloop), local_work%step,
+     &        iloop-1+local_work%felem, local_work%iter,
+     &        local_work%gpn, cc_np1 )
+      call mm10_setup_np1_twin(
+     &        work_vec1, work_vec2, ! read only in subroutine
+     &        local_work%dt, gp_temps(iloop), local_work%step,
+     &        iloop-1+local_work%felem, local_work%iter,
+     &        local_work%gpn, cc_np1_twin )
+
+
+      call mm10_solve_crystal( cc_props, cc_np1, cc_n,
+     &        local_work%material_cut_step, iout, .false., 0,
+     &        p_strain_ten_c, iter_0_extrapolate_off )
+      if( local_work%material_cut_step ) then
+          call mm10_set_cons( local_work, cc_props, 2, i, c )
+          return
+      end if
+
+      call mm10_solve_crystal( cc_props_twin, cc_np1_twin, cc_n_twin,
+     &        local_work%material_cut_step, iout, .false., 0,
+     &        p_strain_ten_c_twin, iter_0_extrapolate_off )
+      if( local_work%material_cut_step ) then
+          call mm10_set_cons( local_work, cc_props_twin, 2, i, c )
+          return
+      end if
