@@ -48,7 +48,7 @@
       cp_009 330.0 cp_010 220.0 cp_011 270.0 cp_012 200.0,
       cp_013 10.0 cp_014 50.0 cp_015 620.0 cp_016 50.0,
       cp_017 0.0 cp_018 0.0 cp_019 280.0 cp_020 0.0,
-      cp_021 20.0
+      cp_021 5.0E-02
 !
  material cp_option_1
   properties cp alpha 0.0 rho 0 angle_convention kocks,
