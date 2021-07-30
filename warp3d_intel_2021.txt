@@ -2,12 +2,13 @@ Compiling WARP-3D with intel oneapi fortran compiler
 **Tested with Intel Fortran Compiler Classic 2021.3.0 and mkl 2021.3.0 standalone
 1. Download VS2019 first and install
 2. Make sure to include Desktop C++ development components in Visual Studio install
-3. Add location of nmake.exe and link.exe (usually same folder) within the VS installation to Path in system environment variables.
-4. Download Intel Fortran Compiler and mkl and install. It will automatically recognize the presence of VS2019.
-5. Add ifort.exe location and mkl_link_tool.exe to Path (mkl libraries may not automatically link to ifort; this might be redundant, but its a safety check)
-6. Open Intel OneAPI command prompt for Intel 64 for Visual Studio (yep, that's the name) - in your start menu, else navigate to it C:\Program Files (x86)\Intel\OneAPI\
-7. Add the location of libraries needed to use nmake executable externally by typing in cmd:
+3. Add location of nmake.exe and link.exe (usually same folder) within the VS installation to Path in system environment variables. (make sure to ensure 32-bit/64-bit consistency with code)
+4. Download Intel Fortran Compiler Classic 2021.3.0  and mkl 2021.3.0 (both standalone) and install. It will automatically recognize the presence of VS2019.
+5. Add ifort.exe location and mkl_link_tool.exe to Path (mkl libraries may not automatically link to ifort; this might be redundant, but its better to do it anyways)
+6. Open Intel OneAPI command prompt for Intel 64 for Visual Studio 2019(yep, that's the name) - in your start menu, else navigate to it C:\Program Files (x86)\Intel\OneAPI\
+7. Add the location of libraries that are needed to use nmake executable externally by typing the following in cmd:
 set LIB="<IFortInstallDir>\compiler\lib\intel64_win";%LIB%  (adjust <IFortInstallDir> as needed)
 8. Go to <Warp3DInstallDir>\src
 9. Type Makewarp.bat 
 10. Enjoy
+Note: You may also use Intel oneAPI base toolkit 2021.3.0 that includes both fortran and mkl, but it includes various other components and is much larger.
