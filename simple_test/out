@@ -12,9 +12,9 @@
     **                                                               **
     **     Windows 10 (Intel Fortran)     -rel-    Release:  18.3.0  **
     **     Code Build Number: 4200                                   **
-    **     Built on: Jul 30 2021 20:30:53                            **
+    **     Built on: Jul 30 2021 22:48:27                            **
     **     University of Illinois @ U-C.    Civil & Env Engineering  **
-    **     Today: Fri Jul 30 20:50:21 2021                           **
+    **     Today: Sat Jul 31 00:30:42 2021                           **
     **                                                               **
     **     NOTICE:  Use of Program Implies Agreement with Terms &    **
     **              Conditions Set Forth in File 'license_agreement' **
@@ -150,7 +150,7 @@
        >> computing tangent stiffness step, iteration:          1  1
        >> running sparse solver step, iteration:                1  1
           >> solver wall time statistics (secs):
-               number of MKL threads used               4
+               number of MKL threads used               8
                MKL version, build:      2021.3 20210611
                starting work                 @       0.02
                finished dof setup            @       0.02
@@ -225,11 +225,11 @@
             min, max diagonal terms:  0.186D+05 0.410D+05
        >> updating strains/stress/forces step, iteration:       3  1
 
-    newton convergence tests step:       3 iteration:   1 @ wall time:      0.2
+    newton convergence tests step:       3 iteration:   1 @ wall time:      0.3
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
-    maximum residual force:  -0.159872E-13 @ (node,dir):      10 Z
-    test 2: norm of residual load vector:          0.35878E-13
+    maximum residual force:   0.213163E-13 @ (node,dir):       3 Y
+    test 2: norm of residual load vector:          0.22904E-13
             norm of total load vector:             0.10921E+03
             ratio*100:         0.00000   (passed)
 
@@ -252,11 +252,11 @@
             min, max diagonal terms:  0.186D+05 0.410D+05
        >> updating strains/stress/forces step, iteration:       4  1
 
-    newton convergence tests step:       4 iteration:   1 @ wall time:      0.3
+    newton convergence tests step:       4 iteration:   1 @ wall time:      0.4
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
-    maximum residual force:  -0.304716E-08 @ (node,dir):      10 Z
-    test 2: norm of residual load vector:          0.52946E-08
+    maximum residual force:  -0.738076E-12 @ (node,dir):      11 X
+    test 2: norm of residual load vector:          0.16262E-11
             norm of total load vector:             0.14561E+03
             ratio*100:         0.00000   (passed)
 
@@ -276,16 +276,16 @@
        >> delta forces for loads/displ/temps/creep. step:       5
        >> computing tangent stiffness step, iteration:          5  1
        >> running sparse solver step, iteration:                5  1
-            min, max diagonal terms:  0.186D+05 0.408D+05
+            min, max diagonal terms:  0.186D+05 0.410D+05
        >> updating strains/stress/forces step, iteration:       5  1
 
-    newton convergence tests step:       5 iteration:   1 @ wall time:      0.3
+    newton convergence tests step:       5 iteration:   1 @ wall time:      0.4
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
-    maximum residual force:  -0.310722E-04 @ (node,dir):      10 Z
-    test 2: norm of residual load vector:          0.53924E-04
+    maximum residual force:  -0.553028E-08 @ (node,dir):      11 X
+    test 2: norm of residual load vector:          0.13853E-07
             norm of total load vector:             0.18200E+03
-            ratio*100:         0.00003   (passed)
+            ratio*100:         0.00000   (passed)
 
 
  >> solution for step:       5 converged:  1 iters.   model time:  0.500000E+01
@@ -301,48 +301,1316 @@
        >> starting global newton solution for step:             6
        >> extrapolating displacements to start step:            6 (*   1.000)
        >> delta forces for loads/displ/temps/creep. step:       6
-  >>> Warning: mm10 implicit solution failed.
-  Material update failed at iter=          31  for miter=          30
-  Reason: absolute residual norm
- -5.186724113565093E-029  5.187430650114195E-029 -2.390897419191587E-132
- -1.309848107587078E-029  1.895507682381298E-005 -5.276345027833313E-006
-   120.033687831993        120.033687831993        120.033687831993     
-   168.026752102606        168.026752102606        168.026752102606     
-  -15.9153650349947        308.136356209385       -15.2109933290188     
-  -9.00880664564661       -7.91785831790090      -4.107570978246502E-005
- -2.347307993183002E-004  5.536230356706802E-004 -1.423186023169739E-004
- -4.932053422900987E-005 -4.242804687315452E-005  1.296284779057936E-011
- -1.588415753384587E-012 -1.989683074392360E-011  2.148524649571915E-011
-  7.119332242572106E-012  0.866025227562461      -0.500000305225294     
-  AbsNorm=  1.310951535088429E-004  AbsTol=  1.000000000000000E-005
-  RelNorm=  3.989830351288254E-005  RelTol=  5.000000000000000E-005
-  Error occured in: element=           2  GaussPoint=           5
-  Fractional step frac=  0.812500000000000       step=  3.125000000000000E-002 
-  cuts=           5
- mm10 stress update failed
        >> computing tangent stiffness step, iteration:          6  1
        >> running sparse solver step, iteration:                6  1
-            min, max diagonal terms:  0.186D+05 0.408D+05
+            min, max diagonal terms:  0.185D+05 0.410D+05
        >> updating strains/stress/forces step, iteration:       6  1
-  >>> Warning: mm10 implicit solution failed.
-  Material update failed at iter=          31  for miter=          30
-  Reason: absolute residual norm
- -5.186724113565093E-029  5.187430650114195E-029 -2.390897419191587E-132
- -1.309848107587078E-029  1.895507682381298E-005 -5.276345027833313E-006
-   120.033687831993        120.033687831993        120.033687831993     
-   168.026752102606        168.026752102606        168.026752102606     
-  -15.9153650349947        308.136356209385       -15.2109933290188     
-  -9.00880664564661       -7.91785831790090      -4.107570978246502E-005
- -2.347307993183002E-004  5.536230356706802E-004 -1.423186023169739E-004
- -4.932053422900987E-005 -4.242804687315452E-005  1.296284779057936E-011
- -1.588415753384587E-012 -1.989683074392360E-011  2.148524649571915E-011
-  7.119332242572106E-012  0.866025227562461      -0.500000305225294     
-  AbsNorm=  1.310951535088429E-004  AbsTol=  1.000000000000000E-005
-  RelNorm=  3.989830351288254E-005  RelTol=  5.000000000000000E-005
-  Error occured in: element=           2  GaussPoint=           5
-  Fractional step frac=  0.812500000000000       step=  3.125000000000000E-002 
-  cuts=           5
- mm10 stress update failed
+
+    newton convergence tests step:       6 iteration:   1 @ wall time:      0.5
+    ---------------------------------------------------------------------------
+    completed fraction over step:  1.0000
+    maximum residual force:   0.117447E-03 @ (node,dir):       3 X
+    test 2: norm of residual load vector:          0.22620E-03
+            norm of total load vector:             0.21790E+03
+            ratio*100:         0.00010   (passed)
 
 
- >>>>> analysis terminated.
+ >> solution for step:       6 converged:  1 iters.   model time:  0.600000E+01
+ >> total applied load pattern factors through step:       6
+      > constraints       6.000
+  
+        output flat text displacements
+        output flat text stresses
+        output flat text strains
+        output flat text reactions
+        output flat text element states
+
+       >> starting global newton solution for step:             7
+       >> extrapolating displacements to start step:            7 (*   1.000)
+       >> delta forces for loads/displ/temps/creep. step:       7
+       >> computing tangent stiffness step, iteration:          7  1
+       >> running sparse solver step, iteration:                7  1
+            min, max diagonal terms:  0.176D+05 0.410D+05
+       >> updating strains/stress/forces step, iteration:       7  1
+
+    newton convergence tests step:       7 iteration:   1 @ wall time:      0.6
+    ---------------------------------------------------------------------------
+    completed fraction over step:  1.0000
+    maximum residual force:   0.111919E-01 @ (node,dir):       3 X
+    test 2: norm of residual load vector:          0.20747E-01
+            norm of total load vector:             0.24902E+03
+            ratio*100:         0.00833   (passed)
+
+
+ >> solution for step:       7 converged:  1 iters.   model time:  0.700000E+01
+ >> total applied load pattern factors through step:       7
+      > constraints       7.000
+  
+        output flat text displacements
+        output flat text stresses
+        output flat text strains
+        output flat text reactions
+        output flat text element states
+
+       >> starting global newton solution for step:             8
+       >> extrapolating displacements to start step:            8 (*   1.000)
+       >> delta forces for loads/displ/temps/creep. step:       8
+       >> computing tangent stiffness step, iteration:          8  1
+       >> running sparse solver step, iteration:                8  1
+            min, max diagonal terms:  0.159D+05 0.410D+05
+       >> updating strains/stress/forces step, iteration:       8  1
+
+    newton convergence tests step:       8 iteration:   1 @ wall time:      0.8
+    ---------------------------------------------------------------------------
+    completed fraction over step:  1.0000
+    maximum residual force:   0.165470E-01 @ (node,dir):       3 Y
+    test 2: norm of residual load vector:          0.42725E-01
+            norm of total load vector:             0.26926E+03
+            ratio*100:         0.01587   (failed)
+
+       >> computing tangent stiffness step, iteration:          8  2
+       >> running sparse solver step, iteration:                8  2
+            min, max diagonal terms:  0.156D+05 0.410D+05
+       >> updating strains/stress/forces step, iteration:       8  2
+
+    newton convergence tests step:       8 iteration:   2 @ wall time:      0.8
+    ---------------------------------------------------------------------------
+    completed fraction over step:  1.0000
+    maximum residual force:  -0.441385E-03 @ (node,dir):      10 X
+    test 2: norm of residual load vector:          0.96600E-03
+            norm of total load vector:             0.26927E+03
+            ratio*100:         0.00036   (passed)
+
+
+ >> solution for step:       8 converged:  2 iters.   model time:  0.800000E+01
+ >> total applied load pattern factors through step:       8
+      > constraints       8.000
+  
+        output flat text displacements
+        output flat text stresses
+        output flat text strains
+        output flat text reactions
+        output flat text element states
+
+       >> starting global newton solution for step:             9
+       >> extrapolating displacements to start step:            9 (*   1.000)
+       >> delta forces for loads/displ/temps/creep. step:       9
+       >> computing tangent stiffness step, iteration:          9  1
+       >> running sparse solver step, iteration:                9  1
+            min, max diagonal terms:  0.147D+05 0.410D+05
+       >> updating strains/stress/forces step, iteration:       9  1
+
+    newton convergence tests step:       9 iteration:   1 @ wall time:      1.0
+    ---------------------------------------------------------------------------
+    completed fraction over step:  1.0000
+    maximum residual force:   0.464730E-01 @ (node,dir):       4 X
+    test 2: norm of residual load vector:          0.88430E-01
+            norm of total load vector:             0.28048E+03
+            ratio*100:         0.03153   (failed)
+
+       >> computing tangent stiffness step, iteration:          9  2
+       >> running sparse solver step, iteration:                9  2
+            min, max diagonal terms:  0.144D+05 0.410D+05
+       >> updating strains/stress/forces step, iteration:       9  2
+
+    newton convergence tests step:       9 iteration:   2 @ wall time:      1.0
+    ---------------------------------------------------------------------------
+    completed fraction over step:  1.0000
+    maximum residual force:  -0.118442E-02 @ (node,dir):      10 X
+    test 2: norm of residual load vector:          0.27072E-02
+            norm of total load vector:             0.28052E+03
+            ratio*100:         0.00097   (passed)
+
+
+ >> solution for step:       9 converged:  2 iters.   model time:  0.900000E+01
+ >> total applied load pattern factors through step:       9
+      > constraints       9.000
+  
+        output flat text displacements
+        output flat text stresses
+        output flat text strains
+        output flat text reactions
+        output flat text element states
+
+       >> starting global newton solution for step:            10
+       >> extrapolating displacements to start step:           10 (*   1.000)
+       >> delta forces for loads/displ/temps/creep. step:      10
+       >> computing tangent stiffness step, iteration:         10  1
+       >> running sparse solver step, iteration:               10  1
+            min, max diagonal terms:  0.140D+05 0.410D+05
+       >> updating strains/stress/forces step, iteration:      10  1
+
+    newton convergence tests step:      10 iteration:   1 @ wall time:      1.2
+    ---------------------------------------------------------------------------
+    completed fraction over step:  1.0000
+    maximum residual force:   0.292431E-01 @ (node,dir):      10 X
+    test 2: norm of residual load vector:          0.64438E-01
+            norm of total load vector:             0.28683E+03
+            ratio*100:         0.02247   (failed)
+
+       >> computing tangent stiffness step, iteration:         10  2
+       >> running sparse solver step, iteration:               10  2
+            min, max diagonal terms:  0.139D+05 0.410D+05
+       >> updating strains/stress/forces step, iteration:      10  2
+
+    newton convergence tests step:      10 iteration:   2 @ wall time:      1.3
+    ---------------------------------------------------------------------------
+    completed fraction over step:  1.0000
+    maximum residual force:   0.106965E-02 @ (node,dir):       5 X
+    test 2: norm of residual load vector:          0.29505E-02
+            norm of total load vector:             0.28686E+03
+            ratio*100:         0.00103   (passed)
+
+
+ >> solution for step:      10 converged:  2 iters.   model time:  0.100000E+02
+ >> total applied load pattern factors through step:      10
+      > constraints      10.000
+  
+        output flat text displacements
+        output flat text stresses
+        output flat text strains
+        output flat text reactions
+        output flat text element states
+
+       >> starting global newton solution for step:            11
+       >> extrapolating displacements to start step:           11 (*   1.000)
+       >> delta forces for loads/displ/temps/creep. step:      11
+       >> computing tangent stiffness step, iteration:         11  1
+       >> running sparse solver step, iteration:               11  1
+            min, max diagonal terms:  0.138D+05 0.410D+05
+       >> updating strains/stress/forces step, iteration:      11  1
+
+    newton convergence tests step:      11 iteration:   1 @ wall time:      1.4
+    ---------------------------------------------------------------------------
+    completed fraction over step:  1.0000
+    maximum residual force:  -0.121697E-01 @ (node,dir):       5 X
+    test 2: norm of residual load vector:          0.29991E-01
+            norm of total load vector:             0.29106E+03
+            ratio*100:         0.01030   (failed)
+
+       >> computing tangent stiffness step, iteration:         11  2
+       >> running sparse solver step, iteration:               11  2
+            min, max diagonal terms:  0.137D+05 0.410D+05
+       >> updating strains/stress/forces step, iteration:      11  2
+
+    newton convergence tests step:      11 iteration:   2 @ wall time:      1.5
+    ---------------------------------------------------------------------------
+    completed fraction over step:  1.0000
+    maximum residual force:   0.668181E-03 @ (node,dir):       5 X
+    test 2: norm of residual load vector:          0.17240E-02
+            norm of total load vector:             0.29108E+03
+            ratio*100:         0.00059   (passed)
+
+
+ >> solution for step:      11 converged:  2 iters.   model time:  0.110000E+02
+ >> total applied load pattern factors through step:      11
+      > constraints      11.000
+  
+        output flat text displacements
+        output flat text stresses
+        output flat text strains
+        output flat text reactions
+        output flat text element states
+
+       >> starting global newton solution for step:            12
+       >> extrapolating displacements to start step:           12 (*   1.000)
+       >> delta forces for loads/displ/temps/creep. step:      12
+       >> computing tangent stiffness step, iteration:         12  1
+       >> running sparse solver step, iteration:               12  1
+            min, max diagonal terms:  0.136D+05 0.410D+05
+       >> updating strains/stress/forces step, iteration:      12  1
+
+    newton convergence tests step:      12 iteration:   1 @ wall time:      1.7
+    ---------------------------------------------------------------------------
+    completed fraction over step:  1.0000
+    maximum residual force:  -0.701231E-02 @ (node,dir):       5 X
+    test 2: norm of residual load vector:          0.15995E-01
+            norm of total load vector:             0.29453E+03
+            ratio*100:         0.00543   (passed)
+
+
+ >> solution for step:      12 converged:  1 iters.   model time:  0.120000E+02
+ >> total applied load pattern factors through step:      12
+      > constraints      12.000
+  
+        output flat text displacements
+        output flat text stresses
+        output flat text strains
+        output flat text reactions
+        output flat text element states
+
+       >> starting global newton solution for step:            13
+       >> extrapolating displacements to start step:           13 (*   1.000)
+       >> delta forces for loads/displ/temps/creep. step:      13
+       >> computing tangent stiffness step, iteration:         13  1
+       >> running sparse solver step, iteration:               13  1
+            min, max diagonal terms:  0.136D+05 0.410D+05
+       >> updating strains/stress/forces step, iteration:      13  1
+
+    newton convergence tests step:      13 iteration:   1 @ wall time:      1.9
+    ---------------------------------------------------------------------------
+    completed fraction over step:  1.0000
+    maximum residual force:  -0.436368E-02 @ (node,dir):       5 X
+    test 2: norm of residual load vector:          0.10495E-01
+            norm of total load vector:             0.29775E+03
+            ratio*100:         0.00352   (passed)
+
+
+ >> solution for step:      13 converged:  1 iters.   model time:  0.130000E+02
+ >> total applied load pattern factors through step:      13
+      > constraints      13.000
+  
+        output flat text displacements
+        output flat text stresses
+        output flat text strains
+        output flat text reactions
+        output flat text element states
+
+       >> starting global newton solution for step:            14
+       >> extrapolating displacements to start step:           14 (*   1.000)
+       >> delta forces for loads/displ/temps/creep. step:      14
+       >> computing tangent stiffness step, iteration:         14  1
+       >> running sparse solver step, iteration:               14  1
+            min, max diagonal terms:  0.136D+05 0.410D+05
+       >> updating strains/stress/forces step, iteration:      14  1
+
+    newton convergence tests step:      14 iteration:   1 @ wall time:      2.0
+    ---------------------------------------------------------------------------
+    completed fraction over step:  1.0000
+    maximum residual force:  -0.370174E-02 @ (node,dir):       5 X
+    test 2: norm of residual load vector:          0.94488E-02
+            norm of total load vector:             0.30090E+03
+            ratio*100:         0.00314   (passed)
+
+
+ >> solution for step:      14 converged:  1 iters.   model time:  0.140000E+02
+ >> total applied load pattern factors through step:      14
+      > constraints      14.000
+  
+        output flat text displacements
+        output flat text stresses
+        output flat text strains
+        output flat text reactions
+        output flat text element states
+
+       >> starting global newton solution for step:            15
+       >> extrapolating displacements to start step:           15 (*   1.000)
+       >> delta forces for loads/displ/temps/creep. step:      15
+       >> computing tangent stiffness step, iteration:         15  1
+       >> running sparse solver step, iteration:               15  1
+            min, max diagonal terms:  0.136D+05 0.410D+05
+       >> updating strains/stress/forces step, iteration:      15  1
+
+    newton convergence tests step:      15 iteration:   1 @ wall time:      2.1
+    ---------------------------------------------------------------------------
+    completed fraction over step:  1.0000
+    maximum residual force:  -0.283476E-02 @ (node,dir):       5 X
+    test 2: norm of residual load vector:          0.74748E-02
+            norm of total load vector:             0.30405E+03
+            ratio*100:         0.00246   (passed)
+
+
+ >> solution for step:      15 converged:  1 iters.   model time:  0.150000E+02
+ >> total applied load pattern factors through step:      15
+      > constraints      15.000
+  
+        output flat text displacements
+        output flat text stresses
+        output flat text strains
+        output flat text reactions
+        output flat text element states
+
+       >> starting global newton solution for step:            16
+       >> extrapolating displacements to start step:           16 (*   1.000)
+       >> delta forces for loads/displ/temps/creep. step:      16
+       >> computing tangent stiffness step, iteration:         16  1
+       >> running sparse solver step, iteration:               16  1
+            min, max diagonal terms:  0.136D+05 0.410D+05
+       >> updating strains/stress/forces step, iteration:      16  1
+
+    newton convergence tests step:      16 iteration:   1 @ wall time:      2.3
+    ---------------------------------------------------------------------------
+    completed fraction over step:  1.0000
+    maximum residual force:  -0.217132E-02 @ (node,dir):       5 X
+    test 2: norm of residual load vector:          0.58212E-02
+            norm of total load vector:             0.30719E+03
+            ratio*100:         0.00189   (passed)
+
+
+ >> solution for step:      16 converged:  1 iters.   model time:  0.160000E+02
+ >> total applied load pattern factors through step:      16
+      > constraints      16.000
+  
+        output flat text displacements
+        output flat text stresses
+        output flat text strains
+        output flat text reactions
+        output flat text element states
+
+       >> starting global newton solution for step:            17
+       >> extrapolating displacements to start step:           17 (*   1.000)
+       >> delta forces for loads/displ/temps/creep. step:      17
+       >> computing tangent stiffness step, iteration:         17  1
+       >> running sparse solver step, iteration:               17  1
+            min, max diagonal terms:  0.136D+05 0.410D+05
+       >> updating strains/stress/forces step, iteration:      17  1
+
+    newton convergence tests step:      17 iteration:   1 @ wall time:      2.4
+    ---------------------------------------------------------------------------
+    completed fraction over step:  1.0000
+    maximum residual force:  -0.157915E-02 @ (node,dir):      11 X
+    test 2: norm of residual load vector:          0.43127E-02
+            norm of total load vector:             0.31036E+03
+            ratio*100:         0.00139   (passed)
+
+
+ >> solution for step:      17 converged:  1 iters.   model time:  0.170000E+02
+ >> total applied load pattern factors through step:      17
+      > constraints      17.000
+  
+        output flat text displacements
+        output flat text stresses
+        output flat text strains
+        output flat text reactions
+        output flat text element states
+
+       >> starting global newton solution for step:            18
+       >> extrapolating displacements to start step:           18 (*   1.000)
+       >> delta forces for loads/displ/temps/creep. step:      18
+       >> computing tangent stiffness step, iteration:         18  1
+       >> running sparse solver step, iteration:               18  1
+            min, max diagonal terms:  0.136D+05 0.410D+05
+       >> updating strains/stress/forces step, iteration:      18  1
+
+    newton convergence tests step:      18 iteration:   1 @ wall time:      2.6
+    ---------------------------------------------------------------------------
+    completed fraction over step:  1.0000
+    maximum residual force:   0.108583E-02 @ (node,dir):       9 X
+    test 2: norm of residual load vector:          0.30366E-02
+            norm of total load vector:             0.31353E+03
+            ratio*100:         0.00097   (passed)
+
+
+ >> solution for step:      18 converged:  1 iters.   model time:  0.180000E+02
+ >> total applied load pattern factors through step:      18
+      > constraints      18.000
+  
+        output flat text displacements
+        output flat text stresses
+        output flat text strains
+        output flat text reactions
+        output flat text element states
+
+       >> starting global newton solution for step:            19
+       >> extrapolating displacements to start step:           19 (*   1.000)
+       >> delta forces for loads/displ/temps/creep. step:      19
+       >> computing tangent stiffness step, iteration:         19  1
+       >> running sparse solver step, iteration:               19  1
+            min, max diagonal terms:  0.136D+05 0.410D+05
+       >> updating strains/stress/forces step, iteration:      19  1
+
+    newton convergence tests step:      19 iteration:   1 @ wall time:      2.7
+    ---------------------------------------------------------------------------
+    completed fraction over step:  1.0000
+    maximum residual force:   0.779928E-03 @ (node,dir):       9 X
+    test 2: norm of residual load vector:          0.19513E-02
+            norm of total load vector:             0.31672E+03
+            ratio*100:         0.00062   (passed)
+
+
+ >> solution for step:      19 converged:  1 iters.   model time:  0.190000E+02
+ >> total applied load pattern factors through step:      19
+      > constraints      19.000
+  
+        output flat text displacements
+        output flat text stresses
+        output flat text strains
+        output flat text reactions
+        output flat text element states
+
+       >> starting global newton solution for step:            20
+       >> extrapolating displacements to start step:           20 (*   1.000)
+       >> delta forces for loads/displ/temps/creep. step:      20
+       >> computing tangent stiffness step, iteration:         20  1
+       >> running sparse solver step, iteration:               20  1
+            min, max diagonal terms:  0.136D+05 0.410D+05
+       >> updating strains/stress/forces step, iteration:      20  1
+
+    newton convergence tests step:      20 iteration:   1 @ wall time:      2.8
+    ---------------------------------------------------------------------------
+    completed fraction over step:  1.0000
+    maximum residual force:   0.517785E-03 @ (node,dir):       9 X
+    test 2: norm of residual load vector:          0.10548E-02
+            norm of total load vector:             0.31991E+03
+            ratio*100:         0.00033   (passed)
+
+
+ >> solution for step:      20 converged:  1 iters.   model time:  0.200000E+02
+ >> total applied load pattern factors through step:      20
+      > constraints      20.000
+  
+        output flat text displacements
+        output flat text stresses
+        output flat text strains
+        output flat text reactions
+        output flat text element states
+
+       >> starting global newton solution for step:            21
+       >> extrapolating displacements to start step:           21 (*   1.000)
+       >> delta forces for loads/displ/temps/creep. step:      21
+       >> computing tangent stiffness step, iteration:         21  1
+       >> running sparse solver step, iteration:               21  1
+            min, max diagonal terms:  0.136D+05 0.410D+05
+       >> updating strains/stress/forces step, iteration:      21  1
+
+    newton convergence tests step:      21 iteration:   1 @ wall time:      2.9
+    ---------------------------------------------------------------------------
+    completed fraction over step:  1.0000
+    maximum residual force:  -0.372792E-03 @ (node,dir):      10 X
+    test 2: norm of residual load vector:          0.71459E-03
+            norm of total load vector:             0.32311E+03
+            ratio*100:         0.00022   (passed)
+
+
+ >> solution for step:      21 converged:  1 iters.   model time:  0.210000E+02
+ >> total applied load pattern factors through step:      21
+      > constraints      21.000
+  
+        output flat text displacements
+        output flat text stresses
+        output flat text strains
+        output flat text reactions
+        output flat text element states
+
+       >> starting global newton solution for step:            22
+       >> extrapolating displacements to start step:           22 (*   1.000)
+       >> delta forces for loads/displ/temps/creep. step:      22
+       >> computing tangent stiffness step, iteration:         22  1
+       >> running sparse solver step, iteration:               22  1
+            min, max diagonal terms:  0.136D+05 0.410D+05
+       >> updating strains/stress/forces step, iteration:      22  1
+
+    newton convergence tests step:      22 iteration:   1 @ wall time:      3.1
+    ---------------------------------------------------------------------------
+    completed fraction over step:  1.0000
+    maximum residual force:   0.591005E-03 @ (node,dir):      11 X
+    test 2: norm of residual load vector:          0.14102E-02
+            norm of total load vector:             0.32631E+03
+            ratio*100:         0.00043   (passed)
+
+
+ >> solution for step:      22 converged:  1 iters.   model time:  0.220000E+02
+ >> total applied load pattern factors through step:      22
+      > constraints      22.000
+  
+        output flat text displacements
+        output flat text stresses
+        output flat text strains
+        output flat text reactions
+        output flat text element states
+
+       >> starting global newton solution for step:            23
+       >> extrapolating displacements to start step:           23 (*   1.000)
+       >> delta forces for loads/displ/temps/creep. step:      23
+       >> computing tangent stiffness step, iteration:         23  1
+       >> running sparse solver step, iteration:               23  1
+            min, max diagonal terms:  0.136D+05 0.409D+05
+       >> updating strains/stress/forces step, iteration:      23  1
+
+    newton convergence tests step:      23 iteration:   1 @ wall time:      3.2
+    ---------------------------------------------------------------------------
+    completed fraction over step:  1.0000
+    maximum residual force:   0.104936E-02 @ (node,dir):       5 X
+    test 2: norm of residual load vector:          0.24482E-02
+            norm of total load vector:             0.32949E+03
+            ratio*100:         0.00074   (passed)
+
+
+ >> solution for step:      23 converged:  1 iters.   model time:  0.230000E+02
+ >> total applied load pattern factors through step:      23
+      > constraints      23.000
+  
+        output flat text displacements
+        output flat text stresses
+        output flat text strains
+        output flat text reactions
+        output flat text element states
+
+       >> starting global newton solution for step:            24
+       >> extrapolating displacements to start step:           24 (*   1.000)
+       >> delta forces for loads/displ/temps/creep. step:      24
+       >> computing tangent stiffness step, iteration:         24  1
+       >> running sparse solver step, iteration:               24  1
+            min, max diagonal terms:  0.137D+05 0.409D+05
+       >> updating strains/stress/forces step, iteration:      24  1
+
+    newton convergence tests step:      24 iteration:   1 @ wall time:      3.3
+    ---------------------------------------------------------------------------
+    completed fraction over step:  1.0000
+    maximum residual force:   0.154220E-02 @ (node,dir):       5 X
+    test 2: norm of residual load vector:          0.36145E-02
+            norm of total load vector:             0.33264E+03
+            ratio*100:         0.00109   (passed)
+
+
+ >> solution for step:      24 converged:  1 iters.   model time:  0.240000E+02
+ >> total applied load pattern factors through step:      24
+      > constraints      24.000
+  
+        output flat text displacements
+        output flat text stresses
+        output flat text strains
+        output flat text reactions
+        output flat text element states
+
+       >> starting global newton solution for step:            25
+       >> extrapolating displacements to start step:           25 (*   1.000)
+       >> delta forces for loads/displ/temps/creep. step:      25
+       >> computing tangent stiffness step, iteration:         25  1
+       >> running sparse solver step, iteration:               25  1
+            min, max diagonal terms:  0.137D+05 0.409D+05
+       >> updating strains/stress/forces step, iteration:      25  1
+
+    newton convergence tests step:      25 iteration:   1 @ wall time:      3.5
+    ---------------------------------------------------------------------------
+    completed fraction over step:  1.0000
+    maximum residual force:   0.204327E-02 @ (node,dir):       5 X
+    test 2: norm of residual load vector:          0.48204E-02
+            norm of total load vector:             0.33576E+03
+            ratio*100:         0.00144   (passed)
+
+
+ >> solution for step:      25 converged:  1 iters.   model time:  0.250000E+02
+ >> total applied load pattern factors through step:      25
+      > constraints      25.000
+  
+        output flat text displacements
+        output flat text stresses
+        output flat text strains
+        output flat text reactions
+        output flat text element states
+
+       >> starting global newton solution for step:            26
+       >> extrapolating displacements to start step:           26 (*   1.000)
+       >> delta forces for loads/displ/temps/creep. step:      26
+       >> computing tangent stiffness step, iteration:         26  1
+       >> running sparse solver step, iteration:               26  1
+            min, max diagonal terms:  0.137D+05 0.409D+05
+       >> updating strains/stress/forces step, iteration:      26  1
+
+    newton convergence tests step:      26 iteration:   1 @ wall time:      3.6
+    ---------------------------------------------------------------------------
+    completed fraction over step:  1.0000
+    maximum residual force:   0.250588E-02 @ (node,dir):      11 X
+    test 2: norm of residual load vector:          0.59509E-02
+            norm of total load vector:             0.33883E+03
+            ratio*100:         0.00176   (passed)
+
+
+ >> solution for step:      26 converged:  1 iters.   model time:  0.260000E+02
+ >> total applied load pattern factors through step:      26
+      > constraints      26.000
+  
+        output flat text displacements
+        output flat text stresses
+        output flat text strains
+        output flat text reactions
+        output flat text element states
+
+       >> starting global newton solution for step:            27
+       >> extrapolating displacements to start step:           27 (*   1.000)
+       >> delta forces for loads/displ/temps/creep. step:      27
+       >> computing tangent stiffness step, iteration:         27  1
+       >> running sparse solver step, iteration:               27  1
+            min, max diagonal terms:  0.137D+05 0.408D+05
+       >> updating strains/stress/forces step, iteration:      27  1
+
+    newton convergence tests step:      27 iteration:   1 @ wall time:      3.7
+    ---------------------------------------------------------------------------
+    completed fraction over step:  1.0000
+    maximum residual force:   0.287626E-02 @ (node,dir):      11 X
+    test 2: norm of residual load vector:          0.68772E-02
+            norm of total load vector:             0.34184E+03
+            ratio*100:         0.00201   (passed)
+
+
+ >> solution for step:      27 converged:  1 iters.   model time:  0.270000E+02
+ >> total applied load pattern factors through step:      27
+      > constraints      27.000
+  
+        output flat text displacements
+        output flat text stresses
+        output flat text strains
+        output flat text reactions
+        output flat text element states
+
+       >> starting global newton solution for step:            28
+       >> extrapolating displacements to start step:           28 (*   1.000)
+       >> delta forces for loads/displ/temps/creep. step:      28
+       >> computing tangent stiffness step, iteration:         28  1
+       >> running sparse solver step, iteration:               28  1
+            min, max diagonal terms:  0.138D+05 0.408D+05
+       >> updating strains/stress/forces step, iteration:      28  1
+
+    newton convergence tests step:      28 iteration:   1 @ wall time:      3.8
+    ---------------------------------------------------------------------------
+    completed fraction over step:  1.0000
+    maximum residual force:   0.311213E-02 @ (node,dir):      11 X
+    test 2: norm of residual load vector:          0.74955E-02
+            norm of total load vector:             0.34480E+03
+            ratio*100:         0.00217   (passed)
+
+
+ >> solution for step:      28 converged:  1 iters.   model time:  0.280000E+02
+ >> total applied load pattern factors through step:      28
+      > constraints      28.000
+  
+        output flat text displacements
+        output flat text stresses
+        output flat text strains
+        output flat text reactions
+        output flat text element states
+
+       >> starting global newton solution for step:            29
+       >> extrapolating displacements to start step:           29 (*   1.000)
+       >> delta forces for loads/displ/temps/creep. step:      29
+       >> computing tangent stiffness step, iteration:         29  1
+       >> running sparse solver step, iteration:               29  1
+            min, max diagonal terms:  0.138D+05 0.408D+05
+       >> updating strains/stress/forces step, iteration:      29  1
+
+    newton convergence tests step:      29 iteration:   1 @ wall time:      3.9
+    ---------------------------------------------------------------------------
+    completed fraction over step:  1.0000
+    maximum residual force:   0.319765E-02 @ (node,dir):      11 X
+    test 2: norm of residual load vector:          0.77616E-02
+            norm of total load vector:             0.34770E+03
+            ratio*100:         0.00223   (passed)
+
+
+ >> solution for step:      29 converged:  1 iters.   model time:  0.290000E+02
+ >> total applied load pattern factors through step:      29
+      > constraints      29.000
+  
+        output flat text displacements
+        output flat text stresses
+        output flat text strains
+        output flat text reactions
+        output flat text element states
+
+       >> starting global newton solution for step:            30
+       >> extrapolating displacements to start step:           30 (*   1.000)
+       >> delta forces for loads/displ/temps/creep. step:      30
+       >> computing tangent stiffness step, iteration:         30  1
+       >> running sparse solver step, iteration:               30  1
+            min, max diagonal terms:  0.138D+05 0.407D+05
+       >> updating strains/stress/forces step, iteration:      30  1
+
+    newton convergence tests step:      30 iteration:   1 @ wall time:      4.1
+    ---------------------------------------------------------------------------
+    completed fraction over step:  1.0000
+    maximum residual force:   0.314534E-02 @ (node,dir):       5 X
+    test 2: norm of residual load vector:          0.76985E-02
+            norm of total load vector:             0.35055E+03
+            ratio*100:         0.00220   (passed)
+
+
+ >> solution for step:      30 converged:  1 iters.   model time:  0.300000E+02
+ >> total applied load pattern factors through step:      30
+      > constraints      30.000
+  
+        output flat text displacements
+        output flat text stresses
+        output flat text strains
+        output flat text reactions
+        output flat text element states
+
+       >> starting global newton solution for step:            31
+       >> extrapolating displacements to start step:           31 (*   1.000)
+       >> delta forces for loads/displ/temps/creep. step:      31
+       >> computing tangent stiffness step, iteration:         31  1
+       >> running sparse solver step, iteration:               31  1
+            min, max diagonal terms:  0.138D+05 0.407D+05
+       >> updating strains/stress/forces step, iteration:      31  1
+
+    newton convergence tests step:      31 iteration:   1 @ wall time:      4.2
+    ---------------------------------------------------------------------------
+    completed fraction over step:  1.0000
+    maximum residual force:   0.298663E-02 @ (node,dir):       5 X
+    test 2: norm of residual load vector:          0.73744E-02
+            norm of total load vector:             0.35335E+03
+            ratio*100:         0.00209   (passed)
+
+
+ >> solution for step:      31 converged:  1 iters.   model time:  0.310000E+02
+ >> total applied load pattern factors through step:      31
+      > constraints      31.000
+  
+        output flat text displacements
+        output flat text stresses
+        output flat text strains
+        output flat text reactions
+        output flat text element states
+
+       >> starting global newton solution for step:            32
+       >> extrapolating displacements to start step:           32 (*   1.000)
+       >> delta forces for loads/displ/temps/creep. step:      32
+       >> computing tangent stiffness step, iteration:         32  1
+       >> running sparse solver step, iteration:               32  1
+            min, max diagonal terms:  0.139D+05 0.407D+05
+       >> updating strains/stress/forces step, iteration:      32  1
+
+    newton convergence tests step:      32 iteration:   1 @ wall time:      4.3
+    ---------------------------------------------------------------------------
+    completed fraction over step:  1.0000
+    maximum residual force:   0.275914E-02 @ (node,dir):       5 X
+    test 2: norm of residual load vector:          0.68741E-02
+            norm of total load vector:             0.35611E+03
+            ratio*100:         0.00193   (passed)
+
+
+ >> solution for step:      32 converged:  1 iters.   model time:  0.320000E+02
+ >> total applied load pattern factors through step:      32
+      > constraints      32.000
+  
+        output flat text displacements
+        output flat text stresses
+        output flat text strains
+        output flat text reactions
+        output flat text element states
+
+       >> starting global newton solution for step:            33
+       >> extrapolating displacements to start step:           33 (*   1.000)
+       >> delta forces for loads/displ/temps/creep. step:      33
+       >> computing tangent stiffness step, iteration:         33  1
+       >> running sparse solver step, iteration:               33  1
+            min, max diagonal terms:  0.139D+05 0.407D+05
+       >> updating strains/stress/forces step, iteration:      33  1
+
+    newton convergence tests step:      33 iteration:   1 @ wall time:      4.4
+    ---------------------------------------------------------------------------
+    completed fraction over step:  1.0000
+    maximum residual force:   0.249712E-02 @ (node,dir):       5 X
+    test 2: norm of residual load vector:          0.62776E-02
+            norm of total load vector:             0.35885E+03
+            ratio*100:         0.00175   (passed)
+
+
+ >> solution for step:      33 converged:  1 iters.   model time:  0.330000E+02
+ >> total applied load pattern factors through step:      33
+      > constraints      33.000
+  
+        output flat text displacements
+        output flat text stresses
+        output flat text strains
+        output flat text reactions
+        output flat text element states
+
+       >> starting global newton solution for step:            34
+       >> extrapolating displacements to start step:           34 (*   1.000)
+       >> delta forces for loads/displ/temps/creep. step:      34
+       >> computing tangent stiffness step, iteration:         34  1
+       >> running sparse solver step, iteration:               34  1
+            min, max diagonal terms:  0.139D+05 0.407D+05
+       >> updating strains/stress/forces step, iteration:      34  1
+
+    newton convergence tests step:      34 iteration:   1 @ wall time:      4.6
+    ---------------------------------------------------------------------------
+    completed fraction over step:  1.0000
+    maximum residual force:   0.222647E-02 @ (node,dir):       5 X
+    test 2: norm of residual load vector:          0.56466E-02
+            norm of total load vector:             0.36155E+03
+            ratio*100:         0.00156   (passed)
+
+
+ >> solution for step:      34 converged:  1 iters.   model time:  0.340000E+02
+ >> total applied load pattern factors through step:      34
+      > constraints      34.000
+  
+        output flat text displacements
+        output flat text stresses
+        output flat text strains
+        output flat text reactions
+        output flat text element states
+
+       >> starting global newton solution for step:            35
+       >> extrapolating displacements to start step:           35 (*   1.000)
+       >> delta forces for loads/displ/temps/creep. step:      35
+       >> computing tangent stiffness step, iteration:         35  1
+       >> running sparse solver step, iteration:               35  1
+            min, max diagonal terms:  0.140D+05 0.406D+05
+       >> updating strains/stress/forces step, iteration:      35  1
+
+    newton convergence tests step:      35 iteration:   1 @ wall time:      4.7
+    ---------------------------------------------------------------------------
+    completed fraction over step:  1.0000
+    maximum residual force:  -0.197998E-02 @ (node,dir):       3 Y
+    test 2: norm of residual load vector:          0.50233E-02
+            norm of total load vector:             0.36424E+03
+            ratio*100:         0.00138   (passed)
+
+
+ >> solution for step:      35 converged:  1 iters.   model time:  0.350000E+02
+ >> total applied load pattern factors through step:      35
+      > constraints      35.000
+  
+        output flat text displacements
+        output flat text stresses
+        output flat text strains
+        output flat text reactions
+        output flat text element states
+
+       >> starting global newton solution for step:            36
+       >> extrapolating displacements to start step:           36 (*   1.000)
+       >> delta forces for loads/displ/temps/creep. step:      36
+       >> computing tangent stiffness step, iteration:         36  1
+       >> running sparse solver step, iteration:               36  1
+            min, max diagonal terms:  0.140D+05 0.406D+05
+       >> updating strains/stress/forces step, iteration:      36  1
+
+    newton convergence tests step:      36 iteration:   1 @ wall time:      4.9
+    ---------------------------------------------------------------------------
+    completed fraction over step:  1.0000
+    maximum residual force:  -0.175280E-02 @ (node,dir):       3 Y
+    test 2: norm of residual load vector:          0.44335E-02
+            norm of total load vector:             0.36692E+03
+            ratio*100:         0.00121   (passed)
+
+
+ >> solution for step:      36 converged:  1 iters.   model time:  0.360000E+02
+ >> total applied load pattern factors through step:      36
+      > constraints      36.000
+  
+        output flat text displacements
+        output flat text stresses
+        output flat text strains
+        output flat text reactions
+        output flat text element states
+
+       >> starting global newton solution for step:            37
+       >> extrapolating displacements to start step:           37 (*   1.000)
+       >> delta forces for loads/displ/temps/creep. step:      37
+       >> computing tangent stiffness step, iteration:         37  1
+       >> running sparse solver step, iteration:               37  1
+            min, max diagonal terms:  0.140D+05 0.406D+05
+       >> updating strains/stress/forces step, iteration:      37  1
+
+    newton convergence tests step:      37 iteration:   1 @ wall time:      5.0
+    ---------------------------------------------------------------------------
+    completed fraction over step:  1.0000
+    maximum residual force:  -0.154233E-02 @ (node,dir):       3 Y
+    test 2: norm of residual load vector:          0.38905E-02
+            norm of total load vector:             0.36958E+03
+            ratio*100:         0.00105   (passed)
+
+
+ >> solution for step:      37 converged:  1 iters.   model time:  0.370000E+02
+ >> total applied load pattern factors through step:      37
+      > constraints      37.000
+  
+        output flat text displacements
+        output flat text stresses
+        output flat text strains
+        output flat text reactions
+        output flat text element states
+
+       >> starting global newton solution for step:            38
+       >> extrapolating displacements to start step:           38 (*   1.000)
+       >> delta forces for loads/displ/temps/creep. step:      38
+       >> computing tangent stiffness step, iteration:         38  1
+       >> running sparse solver step, iteration:               38  1
+            min, max diagonal terms:  0.140D+05 0.406D+05
+       >> updating strains/stress/forces step, iteration:      38  1
+
+    newton convergence tests step:      38 iteration:   1 @ wall time:      5.2
+    ---------------------------------------------------------------------------
+    completed fraction over step:  1.0000
+    maximum residual force:  -0.135124E-02 @ (node,dir):       3 Y
+    test 2: norm of residual load vector:          0.33997E-02
+            norm of total load vector:             0.37223E+03
+            ratio*100:         0.00091   (passed)
+
+
+ >> solution for step:      38 converged:  1 iters.   model time:  0.380000E+02
+ >> total applied load pattern factors through step:      38
+      > constraints      38.000
+  
+        output flat text displacements
+        output flat text stresses
+        output flat text strains
+        output flat text reactions
+        output flat text element states
+
+       >> starting global newton solution for step:            39
+       >> extrapolating displacements to start step:           39 (*   1.000)
+       >> delta forces for loads/displ/temps/creep. step:      39
+       >> computing tangent stiffness step, iteration:         39  1
+       >> running sparse solver step, iteration:               39  1
+            min, max diagonal terms:  0.141D+05 0.406D+05
+       >> updating strains/stress/forces step, iteration:      39  1
+
+    newton convergence tests step:      39 iteration:   1 @ wall time:      5.3
+    ---------------------------------------------------------------------------
+    completed fraction over step:  1.0000
+    maximum residual force:  -0.118006E-02 @ (node,dir):       9 Y
+    test 2: norm of residual load vector:          0.29617E-02
+            norm of total load vector:             0.37487E+03
+            ratio*100:         0.00079   (passed)
+
+
+ >> solution for step:      39 converged:  1 iters.   model time:  0.390000E+02
+ >> total applied load pattern factors through step:      39
+      > constraints      39.000
+  
+        output flat text displacements
+        output flat text stresses
+        output flat text strains
+        output flat text reactions
+        output flat text element states
+
+       >> starting global newton solution for step:            40
+       >> extrapolating displacements to start step:           40 (*   1.000)
+       >> delta forces for loads/displ/temps/creep. step:      40
+       >> computing tangent stiffness step, iteration:         40  1
+       >> running sparse solver step, iteration:               40  1
+            min, max diagonal terms:  0.141D+05 0.406D+05
+       >> updating strains/stress/forces step, iteration:      40  1
+
+    newton convergence tests step:      40 iteration:   1 @ wall time:      5.5
+    ---------------------------------------------------------------------------
+    completed fraction over step:  1.0000
+    maximum residual force:  -0.102795E-02 @ (node,dir):       3 Y
+    test 2: norm of residual load vector:          0.25737E-02
+            norm of total load vector:             0.37751E+03
+            ratio*100:         0.00068   (passed)
+
+
+ >> solution for step:      40 converged:  1 iters.   model time:  0.400000E+02
+ >> total applied load pattern factors through step:      40
+      > constraints      40.000
+  
+        output flat text displacements
+        output flat text stresses
+        output flat text strains
+        output flat text reactions
+        output flat text element states
+
+       >> starting global newton solution for step:            41
+       >> extrapolating displacements to start step:           41 (*   1.000)
+       >> delta forces for loads/displ/temps/creep. step:      41
+       >> computing tangent stiffness step, iteration:         41  1
+       >> running sparse solver step, iteration:               41  1
+            min, max diagonal terms:  0.141D+05 0.406D+05
+       >> updating strains/stress/forces step, iteration:      41  1
+
+    newton convergence tests step:      41 iteration:   1 @ wall time:      5.6
+    ---------------------------------------------------------------------------
+    completed fraction over step:  1.0000
+    maximum residual force:  -0.894258E-03 @ (node,dir):       3 Y
+    test 2: norm of residual load vector:          0.22331E-02
+            norm of total load vector:             0.38015E+03
+            ratio*100:         0.00059   (passed)
+
+
+ >> solution for step:      41 converged:  1 iters.   model time:  0.410000E+02
+ >> total applied load pattern factors through step:      41
+      > constraints      41.000
+  
+        output flat text displacements
+        output flat text stresses
+        output flat text strains
+        output flat text reactions
+        output flat text element states
+
+       >> starting global newton solution for step:            42
+       >> extrapolating displacements to start step:           42 (*   1.000)
+       >> delta forces for loads/displ/temps/creep. step:      42
+       >> computing tangent stiffness step, iteration:         42  1
+       >> running sparse solver step, iteration:               42  1
+            min, max diagonal terms:  0.141D+05 0.406D+05
+       >> updating strains/stress/forces step, iteration:      42  1
+
+    newton convergence tests step:      42 iteration:   1 @ wall time:      5.7
+    ---------------------------------------------------------------------------
+    completed fraction over step:  1.0000
+    maximum residual force:  -0.776770E-03 @ (node,dir):       9 Y
+    test 2: norm of residual load vector:          0.19344E-02
+            norm of total load vector:             0.38278E+03
+            ratio*100:         0.00051   (passed)
+
+
+ >> solution for step:      42 converged:  1 iters.   model time:  0.420000E+02
+ >> total applied load pattern factors through step:      42
+      > constraints      42.000
+  
+        output flat text displacements
+        output flat text stresses
+        output flat text strains
+        output flat text reactions
+        output flat text element states
+
+       >> starting global newton solution for step:            43
+       >> extrapolating displacements to start step:           43 (*   1.000)
+       >> delta forces for loads/displ/temps/creep. step:      43
+       >> computing tangent stiffness step, iteration:         43  1
+       >> running sparse solver step, iteration:               43  1
+            min, max diagonal terms:  0.141D+05 0.406D+05
+       >> updating strains/stress/forces step, iteration:      43  1
+
+    newton convergence tests step:      43 iteration:   1 @ wall time:      5.9
+    ---------------------------------------------------------------------------
+    completed fraction over step:  1.0000
+    maximum residual force:  -0.674211E-03 @ (node,dir):       9 Y
+    test 2: norm of residual load vector:          0.16739E-02
+            norm of total load vector:             0.38542E+03
+            ratio*100:         0.00043   (passed)
+
+
+ >> solution for step:      43 converged:  1 iters.   model time:  0.430000E+02
+ >> total applied load pattern factors through step:      43
+      > constraints      43.000
+  
+        output flat text displacements
+        output flat text stresses
+        output flat text strains
+        output flat text reactions
+        output flat text element states
+
+       >> starting global newton solution for step:            44
+       >> extrapolating displacements to start step:           44 (*   1.000)
+       >> delta forces for loads/displ/temps/creep. step:      44
+       >> computing tangent stiffness step, iteration:         44  1
+       >> running sparse solver step, iteration:               44  1
+            min, max diagonal terms:  0.141D+05 0.406D+05
+       >> updating strains/stress/forces step, iteration:      44  1
+
+    newton convergence tests step:      44 iteration:   1 @ wall time:      6.0
+    ---------------------------------------------------------------------------
+    completed fraction over step:  1.0000
+    maximum residual force:  -0.584792E-03 @ (node,dir):       9 Y
+    test 2: norm of residual load vector:          0.14476E-02
+            norm of total load vector:             0.38805E+03
+            ratio*100:         0.00037   (passed)
+
+
+ >> solution for step:      44 converged:  1 iters.   model time:  0.440000E+02
+ >> total applied load pattern factors through step:      44
+      > constraints      44.000
+  
+        output flat text displacements
+        output flat text stresses
+        output flat text strains
+        output flat text reactions
+        output flat text element states
+
+       >> starting global newton solution for step:            45
+       >> extrapolating displacements to start step:           45 (*   1.000)
+       >> delta forces for loads/displ/temps/creep. step:      45
+       >> computing tangent stiffness step, iteration:         45  1
+       >> running sparse solver step, iteration:               45  1
+            min, max diagonal terms:  0.142D+05 0.406D+05
+       >> updating strains/stress/forces step, iteration:      45  1
+
+    newton convergence tests step:      45 iteration:   1 @ wall time:      6.1
+    ---------------------------------------------------------------------------
+    completed fraction over step:  1.0000
+    maximum residual force:  -0.507031E-03 @ (node,dir):       9 Y
+    test 2: norm of residual load vector:          0.12509E-02
+            norm of total load vector:             0.39068E+03
+            ratio*100:         0.00032   (passed)
+
+
+ >> solution for step:      45 converged:  1 iters.   model time:  0.450000E+02
+ >> total applied load pattern factors through step:      45
+      > constraints      45.000
+  
+        output flat text displacements
+        output flat text stresses
+        output flat text strains
+        output flat text reactions
+        output flat text element states
+
+       >> starting global newton solution for step:            46
+       >> extrapolating displacements to start step:           46 (*   1.000)
+       >> delta forces for loads/displ/temps/creep. step:      46
+       >> computing tangent stiffness step, iteration:         46  1
+       >> running sparse solver step, iteration:               46  1
+            min, max diagonal terms:  0.142D+05 0.406D+05
+       >> updating strains/stress/forces step, iteration:      46  1
+
+    newton convergence tests step:      46 iteration:   1 @ wall time:      6.2
+    ---------------------------------------------------------------------------
+    completed fraction over step:  1.0000
+    maximum residual force:  -0.439638E-03 @ (node,dir):       3 Y
+    test 2: norm of residual load vector:          0.10809E-02
+            norm of total load vector:             0.39331E+03
+            ratio*100:         0.00027   (passed)
+
+
+ >> solution for step:      46 converged:  1 iters.   model time:  0.460000E+02
+ >> total applied load pattern factors through step:      46
+      > constraints      46.000
+  
+        output flat text displacements
+        output flat text stresses
+        output flat text strains
+        output flat text reactions
+        output flat text element states
+
+       >> starting global newton solution for step:            47
+       >> extrapolating displacements to start step:           47 (*   1.000)
+       >> delta forces for loads/displ/temps/creep. step:      47
+       >> computing tangent stiffness step, iteration:         47  1
+       >> running sparse solver step, iteration:               47  1
+            min, max diagonal terms:  0.142D+05 0.406D+05
+       >> updating strains/stress/forces step, iteration:      47  1
+
+    newton convergence tests step:      47 iteration:   1 @ wall time:      6.4
+    ---------------------------------------------------------------------------
+    completed fraction over step:  1.0000
+    maximum residual force:  -0.381229E-03 @ (node,dir):       9 Y
+    test 2: norm of residual load vector:          0.93434E-03
+            norm of total load vector:             0.39594E+03
+            ratio*100:         0.00024   (passed)
+
+
+ >> solution for step:      47 converged:  1 iters.   model time:  0.470000E+02
+ >> total applied load pattern factors through step:      47
+      > constraints      47.000
+  
+        output flat text displacements
+        output flat text stresses
+        output flat text strains
+        output flat text reactions
+        output flat text element states
+
+       >> starting global newton solution for step:            48
+       >> extrapolating displacements to start step:           48 (*   1.000)
+       >> delta forces for loads/displ/temps/creep. step:      48
+       >> computing tangent stiffness step, iteration:         48  1
+       >> running sparse solver step, iteration:               48  1
+            min, max diagonal terms:  0.142D+05 0.406D+05
+       >> updating strains/stress/forces step, iteration:      48  1
+
+    newton convergence tests step:      48 iteration:   1 @ wall time:      6.5
+    ---------------------------------------------------------------------------
+    completed fraction over step:  1.0000
+    maximum residual force:  -0.331019E-03 @ (node,dir):       3 Y
+    test 2: norm of residual load vector:          0.80881E-03
+            norm of total load vector:             0.39857E+03
+            ratio*100:         0.00020   (passed)
+
+
+ >> solution for step:      48 converged:  1 iters.   model time:  0.480000E+02
+ >> total applied load pattern factors through step:      48
+      > constraints      48.000
+  
+        output flat text displacements
+        output flat text stresses
+        output flat text strains
+        output flat text reactions
+        output flat text element states
+
+       >> starting global newton solution for step:            49
+       >> extrapolating displacements to start step:           49 (*   1.000)
+       >> delta forces for loads/displ/temps/creep. step:      49
+       >> computing tangent stiffness step, iteration:         49  1
+       >> running sparse solver step, iteration:               49  1
+            min, max diagonal terms:  0.142D+05 0.405D+05
+       >> updating strains/stress/forces step, iteration:      49  1
+
+    newton convergence tests step:      49 iteration:   1 @ wall time:      6.6
+    ---------------------------------------------------------------------------
+    completed fraction over step:  1.0000
+    maximum residual force:  -0.287698E-03 @ (node,dir):       3 Y
+    test 2: norm of residual load vector:          0.70147E-03
+            norm of total load vector:             0.40120E+03
+            ratio*100:         0.00017   (passed)
+
+
+ >> solution for step:      49 converged:  1 iters.   model time:  0.490000E+02
+ >> total applied load pattern factors through step:      49
+      > constraints      49.000
+  
+        output flat text displacements
+        output flat text stresses
+        output flat text strains
+        output flat text reactions
+        output flat text element states
+
+       >> starting global newton solution for step:            50
+       >> extrapolating displacements to start step:           50 (*   1.000)
+       >> delta forces for loads/displ/temps/creep. step:      50
+       >> computing tangent stiffness step, iteration:         50  1
+       >> running sparse solver step, iteration:               50  1
+            min, max diagonal terms:  0.142D+05 0.405D+05
+       >> updating strains/stress/forces step, iteration:      50  1
+
+    newton convergence tests step:      50 iteration:   1 @ wall time:      6.7
+    ---------------------------------------------------------------------------
+    completed fraction over step:  1.0000
+    maximum residual force:  -0.250658E-03 @ (node,dir):       9 Y
+    test 2: norm of residual load vector:          0.61097E-03
+            norm of total load vector:             0.40383E+03
+            ratio*100:         0.00015   (passed)
+
+
+ >> solution for step:      50 converged:  1 iters.   model time:  0.500000E+02
+ >> total applied load pattern factors through step:      50
+      > constraints      50.000
+  
+        output flat text displacements
+        output flat text stresses
+        output flat text strains
+        output flat text reactions
+        output flat text element states
+       ! 
+       stop
+
+
+
+
+ >>>>>  solution timings   <<<<<
+
+
+  calculations for tangent stiffness:            
+
+   wall time (secs):     0.0153  0.2 (%) no. calls:       54
+
+
+  calculations for tangent mass:                 
+
+   wall time (secs):     0.0002  0.0 (%) no. calls:        1
+
+
+  calculations for sig-eps & internal force:     
+
+   wall time (secs):     5.9364 87.9 (%) no. calls:      104
+
+
+  calculations for assembly of struct. K:        
+
+   wall time (secs):     0.0032  0.0 (%) no. calls:       54
+
+
+  calculations for set-up equations:             
+
+   wall time (secs):     0.0006  0.0 (%) no. calls:        1
+
+
+  calculations for sparse indexes set-up:        
+
+   wall time (secs):     0.0001  0.0 (%) no. calls:        1
+
+
+  calculations for reordering, symbolic factor:  
+
+   wall time (secs):     0.1009  1.5 (%) no. calls:        1
+
+
+  calculations for sparse fill/factor/solve      
+
+   wall time (secs):     0.0047  0.1 (%) no. calls:       54
+ 
+ 
+>> total job wall time (secs):         6.75
