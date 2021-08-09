@@ -21,7 +21,7 @@
                 if( lab(1:nc) .eq. 'yes') then
                    c_array(cnum)%twin = .true.
                 elseif( lab(1:nc) .eq. 'no') then
-                   c_array(cnum)%twin = .true.
+                   c_array(cnum)%twin = .false.
                 else
                    call errmsg(364,dumi,dums,dumr,dumd)
                 end if

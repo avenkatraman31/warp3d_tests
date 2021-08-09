@@ -41,7 +41,7 @@
       properties slip_type hcp30 elastic_type ti6242,
       C11 143500 C12 72500 C13 65400 C33 164900,
       C44 32100 C55 32100,
-      hardening avoche,
+      hardening avoche twin yes,
       cp_001 3.5E-04 cp_002 3.5E-04,
       cp_003 1.0E-04 cp_004 1.0E-04, 
       cp_005 120.0 cp_006 168.0 cp_007 331.0 cp_008 250.0,
@@ -54,8 +54,8 @@
   properties cp alpha 0.0 rho 0 angle_convention kocks,
   n_crystals 2 crystal_input single crystal_type 4,
   angle_type degrees,
-  orientation_input single angles 00.0 90.0 0.0,
-  tolerance 1.0E-10
+  orientation_input single angles 90.0 60.0 30.0,
+  tolerance 1.0E-06
 !
  number of nodes 12 elements 2
 !

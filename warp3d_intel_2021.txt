@@ -5,11 +5,13 @@ Compiling WARP-3D with intel oneapi fortran compiler
 3. Add location of nmake.exe and link.exe (usually same folder) within the VS installation to Path in system environment variables. (make sure to ensure 32-bit/64-bit consistency with code)
 4. Download Intel Fortran Compiler Classic 2021.3.0  and mkl 2021.3.0 (both standalone) and install. It will automatically recognize the presence of VS2019.
 5. Add ifort.exe location and mkl_link_tool.exe to Path (mkl libraries may not automatically link to ifort; this might be redundant, but its better to do it anyways)
-6. Open Intel OneAPI command prompt for Intel 64 for Visual Studio 2019(yep, that's the name) - in your start menu, else navigate to it C:\Program Files (x86)\Intel\OneAPI\
+6. Open Intel OneAPI command prompt for Intel 64 for Visual Studio 2019 (yep, that's the name) - as Administrator
 7. Add the location of libraries that are needed to use nmake executable externally by typing the following in cmd:
 set LIB="<IFortInstallDir>\compiler\lib\intel64_win";%LIB%  (adjust <IFortInstallDir> as needed - for example,
-set LIB="C:\Program Files (x86)\Intel\oneAPI\compiler\2021.2.0\windows\compiler\lib\intel64_win";%LIB%   )
-8. Go to <Warp3DInstallDir>\src
-9. Type Makewarp.bat 
+set LIB="C:\Program Files (x86)\Intel\oneAPI\compiler\2021.3.0\windows\compiler\lib\intel64_win";%LIB%   )
+8. Open cmd; Go to <Warp3DInstallDir>\src; Set nmake directory in Makewarp.bat; In cmd, type Makewarp.bat.
 10. Enjoy
 Note: You may also use Intel oneAPI base toolkit 2021.3.0 that includes both fortran and mkl, but it includes various other components and is much larger.
+self notes:
+nmake: 
+1. laptop --> "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\bin\Hostx64\x64"
