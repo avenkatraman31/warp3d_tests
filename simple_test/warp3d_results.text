@@ -1,7 +1,11 @@
 #
 #  Structure: bar
 #
+<<<<<<< HEAD
 #  Created: Aug  9 2021   10:29:32
+=======
+#  Created: Aug  2 2021   08:03:04
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
 #
 #  Convention: Patran element type and node ordering   
 #

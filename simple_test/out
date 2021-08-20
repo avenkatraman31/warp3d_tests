@@ -12,9 +12,15 @@
     **                                                               **
     **     Windows 10 (Intel Fortran)     -rel-    Release:  18.3.0  **
     **     Code Build Number: 4200                                   **
+<<<<<<< HEAD
     **     Built on: Aug 09 2021 10:27:41                            **
     **     University of Illinois @ U-C.    Civil & Env Engineering  **
     **     Today: Mon Aug  9 10:29:32 2021                           **
+=======
+    **     Built on: Aug 02 2021 07:57:37                            **
+    **     University of Illinois @ U-C.    Civil & Env Engineering  **
+    **     Today: Mon Aug  2 08:03:04 2021                           **
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
     **                                                               **
     **     NOTICE:  Use of Program Implies Agreement with Terms &    **
     **              Conditions Set Forth in File 'license_agreement' **
@@ -150,8 +156,9 @@
        >> computing tangent stiffness step, iteration:          1  1
        >> running sparse solver step, iteration:                1  1
           >> solver wall time statistics (secs):
-               number of MKL threads used               8
+               number of MKL threads used               4
                MKL version, build:      2021.3 20210611
+<<<<<<< HEAD
                starting work                 @       0.02
                finished dof setup            @       0.02
                non-zero term counts finished @       0.02
@@ -169,6 +176,25 @@
                  min diagonal term:  0.183D+05
                  max diagonal term:  0.402D+05
                numeric factor/solve done     @       0.12
+=======
+               starting work                 @       0.10
+               finished dof setup            @       0.10
+               non-zero term counts finished @       0.11
+               number of equations                     20
+               non-zero terms in profile              210
+               building sparse ptrs, indexes @       0.11
+               k_ptrs, k_indexes done        @       0.12
+               sparse [k] assembly done      @       0.12
+               load vector assembly done     @       0.12
+               Pardiso solver initializing   @       0.12
+               reorder-symbolic factor. done @       0.23
+               terms in factored matrix (M):         0.00
+               factorization op count (GFlop):       0.00
+               reordering memory (GB):               0.00
+                 min diagonal term:  0.186D+05
+                 max diagonal term:  0.410D+05
+               numeric factor/solve done     @       0.23
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
        >> updating strains/stress/forces step, iteration:       1  1
 
     newton convergence tests step:       1 iteration:   1 @ wall time:      0.1
@@ -252,7 +278,11 @@
             min, max diagonal terms:  0.183D+05 0.402D+05
        >> updating strains/stress/forces step, iteration:       4  1
 
+<<<<<<< HEAD
     newton convergence tests step:       4 iteration:   1 @ wall time:      0.3
+=======
+    newton convergence tests step:       4 iteration:   1 @ wall time:      0.4
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
     maximum residual force:  -0.118185E-07 @ (node,dir):       3 Y
@@ -279,7 +309,11 @@
             min, max diagonal terms:  0.182D+05 0.398D+05
        >> updating strains/stress/forces step, iteration:       5  1
 
+<<<<<<< HEAD
     newton convergence tests step:       5 iteration:   1 @ wall time:      0.3
+=======
+    newton convergence tests step:       5 iteration:   1 @ wall time:      0.5
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
     maximum residual force:   0.250189E-03 @ (node,dir):       4 Z
@@ -306,6 +340,7 @@
             min, max diagonal terms:  0.169D+05 0.378D+05
        >> updating strains/stress/forces step, iteration:       6  1
 
+<<<<<<< HEAD
     newton convergence tests step:       6 iteration:   1 @ wall time:      0.4
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
@@ -320,6 +355,9 @@
        >> updating strains/stress/forces step, iteration:       6  2
 
     newton convergence tests step:       6 iteration:   2 @ wall time:      0.4
+=======
+    newton convergence tests step:       6 iteration:   1 @ wall time:      0.5
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
     maximum residual force:   0.185627E-03 @ (node,dir):      10 Y
@@ -346,6 +384,7 @@
             min, max diagonal terms:  0.147D+05 0.353D+05
        >> updating strains/stress/forces step, iteration:       7  1
 
+<<<<<<< HEAD
     newton convergence tests step:       7 iteration:   1 @ wall time:      0.5
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
@@ -360,6 +399,9 @@
        >> updating strains/stress/forces step, iteration:       7  2
 
     newton convergence tests step:       7 iteration:   2 @ wall time:      0.5
+=======
+    newton convergence tests step:       7 iteration:   1 @ wall time:      0.6
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
     maximum residual force:   0.481745E-02 @ (node,dir):       3 Z
@@ -399,7 +441,11 @@
             min, max diagonal terms:  0.134D+05 0.344D+05
        >> updating strains/stress/forces step, iteration:       8  2
 
+<<<<<<< HEAD
     newton convergence tests step:       8 iteration:   2 @ wall time:      0.6
+=======
+    newton convergence tests step:       8 iteration:   2 @ wall time:      0.7
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
     maximum residual force:  -0.175890E-01 @ (node,dir):      12 Z
@@ -439,7 +485,11 @@
             min, max diagonal terms:  0.133D+05 0.341D+05
        >> updating strains/stress/forces step, iteration:       9  1
 
+<<<<<<< HEAD
     newton convergence tests step:       9 iteration:   1 @ wall time:      0.7
+=======
+    newton convergence tests step:       9 iteration:   1 @ wall time:      0.8
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
     maximum residual force:   0.565797E-01 @ (node,dir):      10 Y
@@ -479,7 +529,11 @@
             min, max diagonal terms:  0.133D+05 0.339D+05
        >> updating strains/stress/forces step, iteration:      10  1
 
+<<<<<<< HEAD
     newton convergence tests step:      10 iteration:   1 @ wall time:      0.9
+=======
+    newton convergence tests step:      10 iteration:   1 @ wall time:      1.0
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
     maximum residual force:   0.188628E-01 @ (node,dir):      10 Z
@@ -492,7 +546,11 @@
             min, max diagonal terms:  0.133D+05 0.339D+05
        >> updating strains/stress/forces step, iteration:      10  2
 
+<<<<<<< HEAD
     newton convergence tests step:      10 iteration:   2 @ wall time:      0.9
+=======
+    newton convergence tests step:      10 iteration:   2 @ wall time:      1.0
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
     maximum residual force:  -0.108081E-02 @ (node,dir):      10 Z
@@ -519,7 +577,11 @@
             min, max diagonal terms:  0.133D+05 0.338D+05
        >> updating strains/stress/forces step, iteration:      11  1
 
+<<<<<<< HEAD
     newton convergence tests step:      11 iteration:   1 @ wall time:      1.0
+=======
+    newton convergence tests step:      11 iteration:   1 @ wall time:      1.1
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
     maximum residual force:  -0.151575E-01 @ (node,dir):      12 Z
@@ -532,7 +594,11 @@
             min, max diagonal terms:  0.133D+05 0.338D+05
        >> updating strains/stress/forces step, iteration:      11  2
 
+<<<<<<< HEAD
     newton convergence tests step:      11 iteration:   2 @ wall time:      1.0
+=======
+    newton convergence tests step:      11 iteration:   2 @ wall time:      1.1
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
     maximum residual force:   0.271449E-02 @ (node,dir):      12 Z
@@ -559,7 +625,11 @@
             min, max diagonal terms:  0.133D+05 0.338D+05
        >> updating strains/stress/forces step, iteration:      12  1
 
+<<<<<<< HEAD
     newton convergence tests step:      12 iteration:   1 @ wall time:      1.1
+=======
+    newton convergence tests step:      12 iteration:   1 @ wall time:      1.3
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
     maximum residual force:  -0.124664E-01 @ (node,dir):      12 Z
@@ -599,7 +669,11 @@
             min, max diagonal terms:  0.133D+05 0.338D+05
        >> updating strains/stress/forces step, iteration:      13  1
 
+<<<<<<< HEAD
     newton convergence tests step:      13 iteration:   1 @ wall time:      1.2
+=======
+    newton convergence tests step:      13 iteration:   1 @ wall time:      1.5
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
     maximum residual force:  -0.797124E-02 @ (node,dir):      12 Z
@@ -626,7 +700,11 @@
             min, max diagonal terms:  0.134D+05 0.338D+05
        >> updating strains/stress/forces step, iteration:      14  1
 
+<<<<<<< HEAD
     newton convergence tests step:      14 iteration:   1 @ wall time:      1.3
+=======
+    newton convergence tests step:      14 iteration:   1 @ wall time:      1.6
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
     maximum residual force:  -0.258737E-02 @ (node,dir):      12 Z
@@ -653,7 +731,11 @@
             min, max diagonal terms:  0.134D+05 0.338D+05
        >> updating strains/stress/forces step, iteration:      15  1
 
+<<<<<<< HEAD
     newton convergence tests step:      15 iteration:   1 @ wall time:      1.3
+=======
+    newton convergence tests step:      15 iteration:   1 @ wall time:      1.7
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
     maximum residual force:  -0.363391E-02 @ (node,dir):      12 Z
@@ -680,7 +762,11 @@
             min, max diagonal terms:  0.134D+05 0.338D+05
        >> updating strains/stress/forces step, iteration:      16  1
 
+<<<<<<< HEAD
     newton convergence tests step:      16 iteration:   1 @ wall time:      1.4
+=======
+    newton convergence tests step:      16 iteration:   1 @ wall time:      1.8
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
     maximum residual force:  -0.294716E-02 @ (node,dir):      12 Z
@@ -707,7 +793,11 @@
             min, max diagonal terms:  0.135D+05 0.338D+05
        >> updating strains/stress/forces step, iteration:      17  1
 
+<<<<<<< HEAD
     newton convergence tests step:      17 iteration:   1 @ wall time:      1.5
+=======
+    newton convergence tests step:      17 iteration:   1 @ wall time:      1.9
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
     maximum residual force:  -0.361583E-02 @ (node,dir):      12 Z
@@ -734,7 +824,11 @@
             min, max diagonal terms:  0.135D+05 0.338D+05
        >> updating strains/stress/forces step, iteration:      18  1
 
+<<<<<<< HEAD
     newton convergence tests step:      18 iteration:   1 @ wall time:      1.6
+=======
+    newton convergence tests step:      18 iteration:   1 @ wall time:      2.1
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
     maximum residual force:  -0.388314E-02 @ (node,dir):      12 Z
@@ -761,7 +855,11 @@
             min, max diagonal terms:  0.135D+05 0.338D+05
        >> updating strains/stress/forces step, iteration:      19  1
 
+<<<<<<< HEAD
     newton convergence tests step:      19 iteration:   1 @ wall time:      1.6
+=======
+    newton convergence tests step:      19 iteration:   1 @ wall time:      2.2
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
     maximum residual force:  -0.403331E-02 @ (node,dir):      12 Z
@@ -788,7 +886,11 @@
             min, max diagonal terms:  0.135D+05 0.338D+05
        >> updating strains/stress/forces step, iteration:      20  1
 
+<<<<<<< HEAD
     newton convergence tests step:      20 iteration:   1 @ wall time:      1.7
+=======
+    newton convergence tests step:      20 iteration:   1 @ wall time:      2.2
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
     maximum residual force:  -0.386582E-02 @ (node,dir):      12 Z
@@ -815,7 +917,11 @@
             min, max diagonal terms:  0.136D+05 0.338D+05
        >> updating strains/stress/forces step, iteration:      21  1
 
+<<<<<<< HEAD
     newton convergence tests step:      21 iteration:   1 @ wall time:      1.8
+=======
+    newton convergence tests step:      21 iteration:   1 @ wall time:      2.3
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
     maximum residual force:  -0.369941E-02 @ (node,dir):      12 Z
@@ -842,7 +948,11 @@
             min, max diagonal terms:  0.136D+05 0.338D+05
        >> updating strains/stress/forces step, iteration:      22  1
 
+<<<<<<< HEAD
     newton convergence tests step:      22 iteration:   1 @ wall time:      1.8
+=======
+    newton convergence tests step:      22 iteration:   1 @ wall time:      2.4
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
     maximum residual force:  -0.379765E-02 @ (node,dir):      12 Z
@@ -869,7 +979,11 @@
             min, max diagonal terms:  0.136D+05 0.338D+05
        >> updating strains/stress/forces step, iteration:      23  1
 
+<<<<<<< HEAD
     newton convergence tests step:      23 iteration:   1 @ wall time:      1.9
+=======
+    newton convergence tests step:      23 iteration:   1 @ wall time:      2.5
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
     maximum residual force:  -0.432117E-02 @ (node,dir):      12 Z
@@ -896,7 +1010,11 @@
             min, max diagonal terms:  0.136D+05 0.338D+05
        >> updating strains/stress/forces step, iteration:      24  1
 
+<<<<<<< HEAD
     newton convergence tests step:      24 iteration:   1 @ wall time:      2.0
+=======
+    newton convergence tests step:      24 iteration:   1 @ wall time:      2.7
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
     maximum residual force:  -0.511171E-02 @ (node,dir):      12 Z
@@ -931,7 +1049,11 @@
  twin incepted
  twin incepted
 
+<<<<<<< HEAD
     newton convergence tests step:      25 iteration:   1 @ wall time:      2.1
+=======
+    newton convergence tests step:      25 iteration:   1 @ wall time:      2.7
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
     maximum residual force:  -0.578355E-02 @ (node,dir):      12 Z
@@ -966,7 +1088,11 @@
  twin continues
  twin continues
 
+<<<<<<< HEAD
     newton convergence tests step:      26 iteration:   1 @ wall time:      2.2
+=======
+    newton convergence tests step:      26 iteration:   1 @ wall time:      2.8
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
     maximum residual force:  -0.602057E-02 @ (node,dir):      12 Z
@@ -1001,7 +1127,11 @@
  twin continues
  twin continues
 
+<<<<<<< HEAD
     newton convergence tests step:      27 iteration:   1 @ wall time:      2.3
+=======
+    newton convergence tests step:      27 iteration:   1 @ wall time:      2.9
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
     maximum residual force:  -0.577268E-02 @ (node,dir):      12 Z
@@ -1036,7 +1166,11 @@
  twin continues
  twin continues
 
+<<<<<<< HEAD
     newton convergence tests step:      28 iteration:   1 @ wall time:      2.3
+=======
+    newton convergence tests step:      28 iteration:   1 @ wall time:      2.9
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
     maximum residual force:  -0.518207E-02 @ (node,dir):      12 Z
@@ -1071,7 +1205,11 @@
  twin continues
  twin continues
 
+<<<<<<< HEAD
     newton convergence tests step:      29 iteration:   1 @ wall time:      2.4
+=======
+    newton convergence tests step:      29 iteration:   1 @ wall time:      3.0
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
     maximum residual force:  -0.443772E-02 @ (node,dir):      12 Z
@@ -1106,7 +1244,11 @@
  twin continues
  twin continues
 
+<<<<<<< HEAD
     newton convergence tests step:      30 iteration:   1 @ wall time:      2.5
+=======
+    newton convergence tests step:      30 iteration:   1 @ wall time:      3.1
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
     maximum residual force:  -0.369061E-02 @ (node,dir):      12 Z
@@ -1141,7 +1283,11 @@
  twin continues
  twin continues
 
+<<<<<<< HEAD
     newton convergence tests step:      31 iteration:   1 @ wall time:      2.6
+=======
+    newton convergence tests step:      31 iteration:   1 @ wall time:      3.2
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
     maximum residual force:  -0.302989E-02 @ (node,dir):      12 Z
@@ -1176,7 +1322,11 @@
  twin continues
  twin continues
 
+<<<<<<< HEAD
     newton convergence tests step:      32 iteration:   1 @ wall time:      2.6
+=======
+    newton convergence tests step:      32 iteration:   1 @ wall time:      3.3
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
     maximum residual force:  -0.249229E-02 @ (node,dir):      12 Z
@@ -1211,7 +1361,11 @@
  twin continues
  twin continues
 
+<<<<<<< HEAD
     newton convergence tests step:      33 iteration:   1 @ wall time:      2.7
+=======
+    newton convergence tests step:      33 iteration:   1 @ wall time:      3.4
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
     maximum residual force:  -0.208035E-02 @ (node,dir):      12 Z
@@ -1245,6 +1399,7 @@
        >> running sparse solver step, iteration:               34  1
             min, max diagonal terms:  0.139D+05 0.337D+05
        >> updating strains/stress/forces step, iteration:      34  1
+<<<<<<< HEAD
  twin continues
  twin continues
  twin continues
@@ -1255,6 +1410,10 @@
  twin continues
 
     newton convergence tests step:      34 iteration:   1 @ wall time:      2.8
+=======
+
+    newton convergence tests step:      34 iteration:   1 @ wall time:      3.5
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
     maximum residual force:  -0.177923E-02 @ (node,dir):      12 Z
@@ -1288,6 +1447,7 @@
        >> running sparse solver step, iteration:               35  1
             min, max diagonal terms:  0.139D+05 0.336D+05
        >> updating strains/stress/forces step, iteration:      35  1
+<<<<<<< HEAD
  twin continues
  twin continues
  twin continues
@@ -1298,6 +1458,10 @@
  twin continues
 
     newton convergence tests step:      35 iteration:   1 @ wall time:      2.8
+=======
+
+    newton convergence tests step:      35 iteration:   1 @ wall time:      3.6
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
     maximum residual force:  -0.156711E-02 @ (node,dir):      12 Z
@@ -1331,6 +1495,7 @@
        >> running sparse solver step, iteration:               36  1
             min, max diagonal terms:  0.139D+05 0.336D+05
        >> updating strains/stress/forces step, iteration:      36  1
+<<<<<<< HEAD
  twin continues
  twin continues
  twin continues
@@ -1341,6 +1506,10 @@
  twin continues
 
     newton convergence tests step:      36 iteration:   1 @ wall time:      2.9
+=======
+
+    newton convergence tests step:      36 iteration:   1 @ wall time:      3.7
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
     maximum residual force:  -0.142229E-02 @ (node,dir):      12 Z
@@ -1374,6 +1543,7 @@
        >> running sparse solver step, iteration:               37  1
             min, max diagonal terms:  0.139D+05 0.336D+05
        >> updating strains/stress/forces step, iteration:      37  1
+<<<<<<< HEAD
  twin continues
  twin continues
  twin continues
@@ -1384,6 +1554,10 @@
  twin continues
 
     newton convergence tests step:      37 iteration:   1 @ wall time:      3.0
+=======
+
+    newton convergence tests step:      37 iteration:   1 @ wall time:      3.8
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
     maximum residual force:  -0.132554E-02 @ (node,dir):      12 Z
@@ -1417,6 +1591,7 @@
        >> running sparse solver step, iteration:               38  1
             min, max diagonal terms:  0.140D+05 0.336D+05
        >> updating strains/stress/forces step, iteration:      38  1
+<<<<<<< HEAD
  twin continues
  twin continues
  twin continues
@@ -1427,6 +1602,10 @@
  twin continues
 
     newton convergence tests step:      38 iteration:   1 @ wall time:      3.0
+=======
+
+    newton convergence tests step:      38 iteration:   1 @ wall time:      3.9
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
     maximum residual force:  -0.126135E-02 @ (node,dir):      12 Z
@@ -1460,6 +1639,7 @@
        >> running sparse solver step, iteration:               39  1
             min, max diagonal terms:  0.140D+05 0.336D+05
        >> updating strains/stress/forces step, iteration:      39  1
+<<<<<<< HEAD
  twin continues
  twin continues
  twin continues
@@ -1470,6 +1650,10 @@
  twin continues
 
     newton convergence tests step:      39 iteration:   1 @ wall time:      3.1
+=======
+
+    newton convergence tests step:      39 iteration:   1 @ wall time:      3.9
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
     maximum residual force:  -0.121787E-02 @ (node,dir):      12 Z
@@ -1503,6 +1687,7 @@
        >> running sparse solver step, iteration:               40  1
             min, max diagonal terms:  0.140D+05 0.335D+05
        >> updating strains/stress/forces step, iteration:      40  1
+<<<<<<< HEAD
  twin continues
  twin continues
  twin continues
@@ -1513,6 +1698,10 @@
  twin continues
 
     newton convergence tests step:      40 iteration:   1 @ wall time:      3.2
+=======
+
+    newton convergence tests step:      40 iteration:   1 @ wall time:      4.0
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
     maximum residual force:  -0.118651E-02 @ (node,dir):      12 Z
@@ -1546,6 +1735,7 @@
        >> running sparse solver step, iteration:               41  1
             min, max diagonal terms:  0.140D+05 0.335D+05
        >> updating strains/stress/forces step, iteration:      41  1
+<<<<<<< HEAD
  twin continues
  twin continues
  twin continues
@@ -1556,6 +1746,10 @@
  twin continues
 
     newton convergence tests step:      41 iteration:   1 @ wall time:      3.3
+=======
+
+    newton convergence tests step:      41 iteration:   1 @ wall time:      4.0
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
     maximum residual force:  -0.116153E-02 @ (node,dir):      12 Z
@@ -1589,6 +1783,7 @@
        >> running sparse solver step, iteration:               42  1
             min, max diagonal terms:  0.140D+05 0.335D+05
        >> updating strains/stress/forces step, iteration:      42  1
+<<<<<<< HEAD
  twin continues
  twin continues
  twin continues
@@ -1599,6 +1794,10 @@
  twin continues
 
     newton convergence tests step:      42 iteration:   1 @ wall time:      3.3
+=======
+
+    newton convergence tests step:      42 iteration:   1 @ wall time:      4.1
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
     maximum residual force:  -0.113929E-02 @ (node,dir):      12 Z
@@ -1632,6 +1831,7 @@
        >> running sparse solver step, iteration:               43  1
             min, max diagonal terms:  0.140D+05 0.335D+05
        >> updating strains/stress/forces step, iteration:      43  1
+<<<<<<< HEAD
  twin continues
  twin continues
  twin continues
@@ -1642,6 +1842,10 @@
  twin continues
 
     newton convergence tests step:      43 iteration:   1 @ wall time:      3.4
+=======
+
+    newton convergence tests step:      43 iteration:   1 @ wall time:      4.2
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
     maximum residual force:  -0.111788E-02 @ (node,dir):      12 Z
@@ -1675,6 +1879,7 @@
        >> running sparse solver step, iteration:               44  1
             min, max diagonal terms:  0.141D+05 0.335D+05
        >> updating strains/stress/forces step, iteration:      44  1
+<<<<<<< HEAD
  twin continues
  twin continues
  twin continues
@@ -1685,6 +1890,10 @@
  twin continues
 
     newton convergence tests step:      44 iteration:   1 @ wall time:      3.5
+=======
+
+    newton convergence tests step:      44 iteration:   1 @ wall time:      4.2
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
     maximum residual force:  -0.109656E-02 @ (node,dir):      12 Z
@@ -1718,6 +1927,7 @@
        >> running sparse solver step, iteration:               45  1
             min, max diagonal terms:  0.141D+05 0.335D+05
        >> updating strains/stress/forces step, iteration:      45  1
+<<<<<<< HEAD
  twin continues
  twin continues
  twin continues
@@ -1728,6 +1938,10 @@
  twin continues
 
     newton convergence tests step:      45 iteration:   1 @ wall time:      3.5
+=======
+
+    newton convergence tests step:      45 iteration:   1 @ wall time:      4.3
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
     maximum residual force:  -0.107545E-02 @ (node,dir):      12 Z
@@ -1761,6 +1975,7 @@
        >> running sparse solver step, iteration:               46  1
             min, max diagonal terms:  0.141D+05 0.335D+05
        >> updating strains/stress/forces step, iteration:      46  1
+<<<<<<< HEAD
  twin continues
  twin continues
  twin continues
@@ -1771,6 +1986,10 @@
  twin continues
 
     newton convergence tests step:      46 iteration:   1 @ wall time:      3.6
+=======
+
+    newton convergence tests step:      46 iteration:   1 @ wall time:      4.4
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
     maximum residual force:  -0.107472E-02 @ (node,dir):      10 Y
@@ -1804,6 +2023,7 @@
        >> running sparse solver step, iteration:               47  1
             min, max diagonal terms:  0.141D+05 0.334D+05
        >> updating strains/stress/forces step, iteration:      47  1
+<<<<<<< HEAD
  twin continues
  twin continues
  twin continues
@@ -1814,6 +2034,10 @@
  twin continues
 
     newton convergence tests step:      47 iteration:   1 @ wall time:      3.7
+=======
+
+    newton convergence tests step:      47 iteration:   1 @ wall time:      4.5
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
     maximum residual force:  -0.107195E-02 @ (node,dir):      10 Y
@@ -1847,6 +2071,7 @@
        >> running sparse solver step, iteration:               48  1
             min, max diagonal terms:  0.141D+05 0.334D+05
        >> updating strains/stress/forces step, iteration:      48  1
+<<<<<<< HEAD
  twin continues
  twin continues
  twin continues
@@ -1857,6 +2082,10 @@
  twin continues
 
     newton convergence tests step:      48 iteration:   1 @ wall time:      3.7
+=======
+
+    newton convergence tests step:      48 iteration:   1 @ wall time:      4.5
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
     maximum residual force:  -0.106638E-02 @ (node,dir):      10 Y
@@ -1890,6 +2119,7 @@
        >> running sparse solver step, iteration:               49  1
             min, max diagonal terms:  0.141D+05 0.334D+05
        >> updating strains/stress/forces step, iteration:      49  1
+<<<<<<< HEAD
  twin continues
  twin continues
  twin continues
@@ -1900,6 +2130,10 @@
  twin continues
 
     newton convergence tests step:      49 iteration:   1 @ wall time:      3.8
+=======
+
+    newton convergence tests step:      49 iteration:   1 @ wall time:      4.6
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
     maximum residual force:  -0.105801E-02 @ (node,dir):      10 Y
@@ -1933,6 +2167,7 @@
        >> running sparse solver step, iteration:               50  1
             min, max diagonal terms:  0.142D+05 0.334D+05
        >> updating strains/stress/forces step, iteration:      50  1
+<<<<<<< HEAD
  twin continues
  twin continues
  twin continues
@@ -1943,6 +2178,10 @@
  twin continues
 
     newton convergence tests step:      50 iteration:   1 @ wall time:      3.9
+=======
+
+    newton convergence tests step:      50 iteration:   1 @ wall time:      4.7
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
     ---------------------------------------------------------------------------
     completed fraction over step:  1.0000
     maximum residual force:  -0.104669E-02 @ (node,dir):      10 Y
@@ -1971,42 +2210,77 @@
 
   calculations for tangent stiffness:            
 
+<<<<<<< HEAD
    wall time (secs):     0.0240  0.6 (%) no. calls:       58
+=======
+   wall time (secs):     0.2389  5.1 (%) no. calls:       54
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
 
 
   calculations for tangent mass:                 
 
+<<<<<<< HEAD
    wall time (secs):     0.0004  0.0 (%) no. calls:        1
+=======
+   wall time (secs):     0.0003  0.0 (%) no. calls:        1
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
 
 
   calculations for sig-eps & internal force:     
 
+<<<<<<< HEAD
    wall time (secs):     2.6991 69.5 (%) no. calls:      108
+=======
+   wall time (secs):     2.3754 50.6 (%) no. calls:      104
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
 
 
   calculations for assembly of struct. K:        
 
+<<<<<<< HEAD
    wall time (secs):     0.0024  0.1 (%) no. calls:       58
+=======
+   wall time (secs):     0.2087  4.4 (%) no. calls:       54
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
 
 
   calculations for set-up equations:             
 
+<<<<<<< HEAD
    wall time (secs):     0.0007  0.0 (%) no. calls:        1
+=======
+   wall time (secs):     0.0043  0.1 (%) no. calls:        1
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
 
 
   calculations for sparse indexes set-up:        
 
+<<<<<<< HEAD
    wall time (secs):     0.0002  0.0 (%) no. calls:        1
+=======
+   wall time (secs):     0.0079  0.2 (%) no. calls:        1
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
 
 
   calculations for reordering, symbolic factor:  
 
+<<<<<<< HEAD
    wall time (secs):     0.1013  2.6 (%) no. calls:        1
+=======
+   wall time (secs):     0.1107  2.4 (%) no. calls:        1
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
 
 
   calculations for sparse fill/factor/solve      
 
+<<<<<<< HEAD
    wall time (secs):     0.0064  0.2 (%) no. calls:       58
  
  
 >> total job wall time (secs):         3.88
+=======
+   wall time (secs):     0.0048  0.1 (%) no. calls:       54
+ 
+ 
+>> total job wall time (secs):         4.69
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26

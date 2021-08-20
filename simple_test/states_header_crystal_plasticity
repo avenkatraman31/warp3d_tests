@@ -2,7 +2,11 @@
 #  header file for state variable output
 #  WARP3D material: crystal_plasticity  
 #   
+<<<<<<< HEAD
 #  Mon Aug  9 10:29:36 2021
+=======
+#  Mon Aug  2 08:03:08 2021
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
 #  ==> User states type:  1 option:  0
 #  ==> Max # crystals used by any CP material:     2
 #   

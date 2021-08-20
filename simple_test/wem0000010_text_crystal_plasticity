@@ -2,7 +2,11 @@
 #  WARP3D element results: states
 #  Structure name: bar     
 #  Model nodes, elements:       12       2
+<<<<<<< HEAD
 #  Mon Aug  9 10:29:33 2021
+=======
+#  Mon Aug  2 08:03:05 2021
+>>>>>>> 474df9a4415dbed2291a3681fda954199e061c26
 #  Load(time) step:       10
 #
    0.224999E+02   0.149776E+02   0.749997E+01   0.224999E+02   0.149776E+02   0.749997E+01
