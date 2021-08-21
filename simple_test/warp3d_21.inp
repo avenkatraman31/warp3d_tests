@@ -37,19 +37,34 @@
       gt_1 18.75 gt_4 12.5 gt_7 156.25 gt_19 76.25,
       n_1 0.15 n_4 0.15 n_7 0.15 n_19 0.15,
       gamma_tw 0.129
+!   
+!    Zirconium -- Abdolvand 2011	  
 !
  crystal 4
       properties slip_type hcp24_t elastic_type ti6242,
       C11 143500 C12 72500 C13 65400 C33 164900,
       C44 32100 C55 32100,
-      hardening avoche twin no,
+      hardening avoche twin yes,
       cp_001 3.5E-04 cp_002 3.5E-04,
       cp_003 1.0E-04 cp_004 1.0E-04, 
-      cp_005 120.0 cp_006 170.0 cp_007 331.0 cp_008 200,
-      cp_009 330.0 cp_010 220.0 cp_011 270.0 cp_012 100,
-      cp_013 10.0 cp_014 050.0 cp_015 500.0 cp_016 50.0,
+      cp_005 170.0 cp_006 120.0 cp_007 331.0 cp_008 250,
+      cp_009 220.0 cp_010 330.0 cp_011 270.0 cp_012 200,
+      cp_013 10.0 cp_014 50.0 cp_015 620.0 cp_016 0.0,
       cp_017 0.0 cp_018 0.0 cp_019 0.0 cp_020 0.0,
-      cp_021 5.0E-02 gamma_tw 0.129
+      cp_021 5.0E-02 gamma_tw 0.629
+!
+ crystal 5
+     properties slip_type hcp24_t elastic_type ti6242,
+      C11 63500 C12 25900 C13 21700 C33 66400,
+      C44 18420 C55 18420,
+      hardening avoche twin yes,
+      cp_001 1.5E-04 cp_002 1.5E-04,
+      cp_003 1.0E-04 cp_004 1.0E-04, 
+      cp_005 10.0 cp_006 20.0 cp_007 140.0 cp_008 10,
+      cp_009 5.0 cp_010 50.0 cp_011 60.0 cp_012 50,
+      cp_013 10.0 cp_014 20.0 cp_015 1000.0 cp_016 10.0,
+      cp_017 1.0 cp_018 0.0 cp_019 0.0 cp_020 0.0,
+      cp_021 5.0E-02 gamma_tw 1.329
 
  material cp_option_1
   properties cp alpha 0.0 rho 0 angle_convention kocks,
@@ -19993,18 +20008,18 @@ constraints
    plane x=0 symmetry
    plane y=0 symmetry
    plane z=0 symmetry
-   plane z=63 w 0.126  $ 1 mm. see scaling in step definitions
+   plane z=63 w 0.0315  $ 1 mm. see scaling in step definitions
 !
  loading test  
   nonlinear
-    step 1-50 constraints 1
+    step 1-200 constraints 1
 !   
 nonlinear analysis parameters
    solution technique sparse iterative 
    maximum iterations 15 $ newton
    minimum iterations 1
    convergence test norm res tol 0.01
-   time step 5.5e-5
+   time step 1.0e-3
    trace solution on
    adaptive solution on
    batch messages off
@@ -20013,7 +20028,7 @@ nonlinear analysis parameters
    line search on
 ! 
  output commands use file "get_output.inp" ,
- after steps 1-50 by 1
- compute displacements for loading test step 50
+ after steps 1-200 by 1
+ compute displacements for loading test step 200
 ! 
 stop

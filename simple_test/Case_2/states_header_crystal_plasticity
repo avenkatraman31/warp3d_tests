@@ -1,0 +1,19 @@
+#
+#  header file for state variable output
+#  WARP3D material: crystal_plasticity  
+#   
+#  Fri Aug 20 18:04:57 2021
+#  ==> User states type:  1 option:  0
+#  ==> Max # crystals used by any CP material:     2
+#   
+#
+#  8 character state labels and longer descriptors
+#  material model number, number of state variables 
+#
+     6
+       1  EA1-0001  Eu angle- cry # 0001                                        
+       2  EA2-0001                                                              
+       3  EA3-0001                                                              
+       4  EA1-0002  Eu angle- cry # 0002                                        
+       5  EA2-0002                                                              
+       6  EA3-0002                                                              

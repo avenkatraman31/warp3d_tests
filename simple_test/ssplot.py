@@ -16,12 +16,13 @@ import sys
 from matplotlib import rc
 from mpl_toolkits.mplot3d import Axes3D  
 import scipy.io as sio
+from subprocess import call
 
-nel=9261
+nel=1
 stress_files=[]
 strain_files=[]
-
-for file in os.listdir(os.getcwd()):
+fold=os.getcwd()#+os.sep+'Case_1'
+for file in os.listdir(fold):
     if (file.startswith('wes')):
         stress_files.append(file)
     if(file.startswith('wee')):
@@ -38,8 +39,8 @@ else:
 
 
 for ii,(file1,file2) in enumerate(zip(strain_files,stress_files)):
-    f1=open(file1,'r')
-    f2=open(file2,'r')
+    f1=open(fold+os.sep+file1,'r')
+    f2=open(fold+os.sep+file2,'r')
     if nel==1:
         for _ in range(7):
             f1.readline()
@@ -68,6 +69,12 @@ l0,=plt.plot(strain[:,2],stress[:,2],'k')
 plt.xlabel('Strain ')
 plt.ylabel('Stress')
 plt.title('Stress Strain curves')
+rmt="rm *_text"
+rmp="rm *_plasticity"
+call(rmt, shell=True)
+call(rmp, shell=True)
+
+
 sio.savemat('case1.mat',{'strain':strain[:,2],'stress':stress[:,2]})
 
 # mg_sim=sio.loadmat('mg_single_crystal.mat')
@@ -90,20 +97,20 @@ sio.savemat('case1.mat',{'strain':strain[:,2],'stress':stress[:,2]})
 # plt.savefig('mg_single_crystal.eps')
 
 
-zr_sim=sio.loadmat('zr_polycrystal.mat')
-rc('font',size=10)
-rc('font',family='serif')
-rc('axes',labelsize=10)
-rc('text', usetex=True)
-l0,=plt.plot(zr_sim['zr_nd_sim'][:,0] ,zr_sim['zr_nd_sim'][:,1],'k')
-l1,=plt.plot(zr_sim['zr_td_sim'][:,0] ,zr_sim['zr_td_sim'][:,1],'r')
-l2,=plt.plot(zr_sim['zr_rd_sim'][:,0] ,zr_sim['zr_rd_sim'][:,1],'g')
-zr_exp=sio.loadmat('zr_polycrystal_exp.mat')
-l3,=plt.plot(zr_exp['zr_nd_exp'][:,0] ,zr_exp['zr_nd_exp'][:,1],'ko')
-l4,=plt.plot(zr_exp['zr_td_exp'][:,0] ,zr_exp['zr_td_exp'][:,1],'ro')
-l5,=plt.plot(zr_exp['zr_rd_exp'][:,0] ,zr_exp['zr_rd_exp'][:,1],'go')
+# zr_sim=sio.loadmat('zr_polycrystal.mat')
+# rc('font',size=10)
+# rc('font',family='serif')
+# rc('axes',labelsize=10)
+# rc('text', usetex=True)
+# l0,=plt.plot(zr_sim['zr_nd_sim'][:,0] ,zr_sim['zr_nd_sim'][:,1],'k')
+# l1,=plt.plot(zr_sim['zr_td_sim'][:,0] ,zr_sim['zr_td_sim'][:,1],'r')
+# l2,=plt.plot(zr_sim['zr_rd_sim'][:,0] ,zr_sim['zr_rd_sim'][:,1],'g')
+# zr_exp=sio.loadmat('zr_polycrystal_exp.mat')
+# l3,=plt.plot(zr_exp['zr_nd_exp'][:,0] ,zr_exp['zr_nd_exp'][:,1],'ko')
+# l4,=plt.plot(zr_exp['zr_td_exp'][:,0] ,zr_exp['zr_td_exp'][:,1],'ro')
+# l5,=plt.plot(zr_exp['zr_rd_exp'][:,0] ,zr_exp['zr_rd_exp'][:,1],'go')
 
-plt.legend([l0,l1,l2,l3,l4,l5],['ND : FE','TD : FE','RD : FE','ND : Exp','TD : Exp','RD : Exp'])
-plt.xlabel('Strain')
-plt.ylabel('Stress (MPa)')
-plt.savefig('zr_polycrystal.eps')
+# plt.legend([l0,l1,l2,l3,l4,l5],['ND : FE','TD : FE','RD : FE','ND : Exp','TD : Exp','RD : Exp'])
+# plt.xlabel('Strain')
+# plt.ylabel('Stress (MPa)')
+# plt.savefig('zr_polycrystal.eps')

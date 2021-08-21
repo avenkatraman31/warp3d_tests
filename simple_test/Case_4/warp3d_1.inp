@@ -1,0 +1,127 @@
+! Created by 'Not real Engineering'
+! Author: Shank S. Kulkarni
+!
+ structure cube
+!
+ crystal 1
+      properties slip_type fcc elastic_type isotropic,
+      hardening voce,
+      e 200000 nu 0.3 harden_n 5,48
+      alter_mode on,
+      theta_0 0.01 voce_m 1.0 tau_v 5000 tau_y 205.0,
+      gamma_bar 4.0e-05
+!
+ crystal 2
+      properties slip_type hcp18 elastic_type ti6242,
+      hardening djgm,
+      C11 143500 C12 72500 C13 65400 C33 164900,
+      C44 32100 C55 32100,
+      gam_1 0.12 gam_4 0.12 gam_7 0.12,
+      g0_1 68.08 g0_4 54.46 g0_7 163.4,
+      m_1 0.05 m_4 0.05 m_7 0.05,
+      h0_1 7.81 h0_4 16.2 h0_7 48.7,
+      r_1 0.15 r_4 0.29 r_7 0.29,
+      gt_1 18.75 gt_4 12.5 gt_7 56.25,
+      n_1 0.14 n_4 0.15 n_7 0.15
+!
+ crystal 3
+      properties slip_type hcp24_t elastic_type ti6242,
+      hardening djgm twin yes,
+      C11 143500 C12 72500 C13 65400 C33 164900,
+      C44 32100 C55 32100,
+      gam_1 0.12 gam_4 0.12 gam_7 0.12 gam_19 0.12,
+      g0_1 68.08 g0_4 54.46 g0_7 163.4 g0_19 65.4,
+      m_1 0.2 m_4 0.2 m_7 0.2 m_19 0.2,
+      h0_1 7.81 h0_4 16.2 h0_7 148.7 h0_19 28.7,
+      r_1 0.15 r_4 0.29 r_7 0.29 r_19 0.29,
+      gt_1 18.75 gt_4 12.5 gt_7 156.25 gt_19 76.25,
+      n_1 0.15 n_4 0.15 n_7 0.15 n_19 0.15,
+      gamma_tw 0.429
+!   
+!    Zirconium -- Abdolvand 2011	  
+!
+ crystal 4
+      properties slip_type hcp24_t elastic_type ti6242,
+      C11 143500 C12 72500 C13 65400 C33 164900,
+      C44 32100 C55 32100,
+      hardening avoche twin yes,
+      cp_001 3.5E-04 cp_002 3.5E-04,
+      cp_003 1.0E-04 cp_004 1.0E-04, 
+      cp_005 170.0 cp_006 120.0 cp_007 331.0 cp_008 250,
+      cp_009 220.0 cp_010 330.0 cp_011 270.0 cp_012 200,
+      cp_013 10.0 cp_014 50.0 cp_015 620.0 cp_016 0.0,
+      cp_017 0.0 cp_018 0.0 cp_019 0.0 cp_020 0.0,
+      cp_021 5.0E-02 gamma_tw 0.629
+!
+ crystal 5
+     properties slip_type hcp24_t elastic_type ti6242,
+      C11 63500 C12 25900 C13 21700 C33 66400,
+      C44 18420 C55 18420,
+      hardening avoche twin yes,
+      cp_001 1.5E-04 cp_002 1.5E-04,
+      cp_003 1.0E-04 cp_004 1.0E-04, 
+      cp_005 10.0 cp_006 20.0 cp_007 140.0 cp_008 10,
+      cp_009 5.0 cp_010 50.0 cp_011 60.0 cp_012 50,
+      cp_013 10.0 cp_014 20.0 cp_015 1000.0 cp_016 10.0,
+      cp_017 1.0 cp_018 0.0 cp_019 0.0 cp_020 0.0,
+      cp_021 5.0E-02 gamma_tw 1.329
+
+ material cp_option_1
+  properties cp alpha 0.0 rho 0 angle_convention kocks,
+  n_crystals 2 crystal_input single crystal_type 5,
+  angle_type degrees,
+  orientation_input single angles 90.0 75.0 0.0,
+!  orientation_input file filename 'angles.inp',
+  tolerance 1.0E-6
+!
+ number of nodes 8 elements 1
+!
+ elements
+ 1 type l3disop linear material cp_option_1,
+     order 2x2x2 bbar short
+!
+ coordinates
+     1  0.000000000E+00  0.000000000E+00  0.000000000E+00
+      2  1.0E+00  0.000000000E+00  0.000000000E+00
+      3  1.0E+00  1.000000000E+00  0.000000000E+00
+      4  0.000000000E+01  1.000000000E+00  0.000000000E+00
+      5  0.000000000E+00  0.0E+00  1.000000000E+00
+      6  1.0E+00  0.0E+00  1.000000000E+00
+      7  1.0E+00  1.0E+00  1.000000000E+00
+      8  0.000000000E+01  1.0E+00  1.000000000E+00
+! 
+ incidences 
+       1       1       2       3       4      5      6      7      8
+!
+ blocking automatic
+ output model flat patran convention text file "warp3d_results"
+constraints
+!    1-4 u 0 v 0 w 0
+!    5-8 w 0.002
+    1-8 u 0
+    1 2 3 4 w 0
+    5 6 7 8 w 0.00025
+	1 2 5 6 v 0	
+!
+ loading test  
+  nonlinear
+    step 1-400 constraints 1
+!   
+nonlinear analysis parameters
+   solution technique sparse iterative 
+   maximum iterations 15 $ newton
+   minimum iterations 1
+   convergence test norm res tol 0.01
+   time step 1.0e-3
+   trace solution on
+   adaptive solution on
+   batch messages off
+   bbar stabilization factor 0.1
+   extrapolate off
+   line search on
+! 
+ output commands use file "get_output.inp" ,
+ after steps 1-400 by 1
+ compute displacements for loading test step 400
+! 
+stop

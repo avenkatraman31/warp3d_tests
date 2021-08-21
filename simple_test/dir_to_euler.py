@@ -36,7 +36,7 @@ def dir_to_euler(b,n,kocks=True):
     n3[:]=n3[:]/snm
     b3[:]=b3[:]/sdm
     t3=np.cross(b3,n3)
-    rotmat=np.array([b3,n3,t3])
+    rotmat=np.array([b3,n3,t3]).T
     psi=arctan2(rotmat[2,1],rotmat[2,0])*180/np.pi
     phi=arctan2(rotmat[1,2],rotmat[0,2])*180/np.pi
     if psi < 0: psi=psi+360
@@ -73,14 +73,33 @@ def conv_switch(euler,kocks=False,degree=True):
         return np.array([psi,theta,phi])
 eulerfiles=[]
 
-for file in os.listdir(os.getcwd()):
-    if file.startswith('EulerAngles') and file.endswith('.txt'): 
-        eulerfiles.append(file)
-eulerfiles=sorted(eulerfiles)
+# for file in os.listdir(os.getcwd()):
+#     if file.startswith('EulerAngles') and file.endswith('.txt'): 
+#         eulerfiles.append(file)
+# eulerfiles=sorted(eulerfiles)
 
-for file in eulerfiles:
-    f=open(file,'r')
-    eulers=np.loadtxt(f,delimiter=',')
-    eulers=eulers*180/np.pi
-    eulers=np.apply_along_axis(conv_switch,0,eulers)
-        
+# for file in eulerfiles:
+#     f=open(file,'r')
+#     eulers=np.loadtxt(f,delimiter=',')
+#     eulers=eulers*180/np.pi
+#     eulers=np.apply_along_axis(conv_switch,0,eulers)
+
+n=np.array([[0,0,0,1],\
+            [0,0,0,1],\
+            [1,0,-1,0],\
+            [1,-2,1,0],\
+            [1,0,-1,0],\
+            [1,-2,1,0],\
+            ])
+b=np.array([[1,0,-1,0],\
+            [1,-2,1,0],\
+            [0,0,0,1],\
+            [0,0,0,1],\
+            [1,-2,1,0],\
+            [1,0,-1,0],\
+            ])
+
+
+euler=np.zeros((b.shape[0],3))
+for i,(b2,n2) in enumerate(zip(b,n)):
+    euler[i,:]=dir_to_euler(b2, n2)

@@ -108,11 +108,11 @@ if __name__=="__main__":
     asin=arcsin
     acos=arccos
     #Defining number of elements, no. of nodes, domain size, indenter radius , domain discretization
-    ndim=10#int(sys.argv[1])
+    ndim=21#int(sys.argv[1])
     defmode=0
     totalstrain=0.5
     timesteps=101
-    domain=1#float(sys.argv[2])
+    domain=63#float(sys.argv[2])
     nnode=np.copy(ndim)+1
     domain_discrete=np.linspace(0,domain,nnode)
     #Creating 3-D mesh grid of points and retrieving nodeset and elset
@@ -121,7 +121,7 @@ if __name__=="__main__":
     nodes=np.column_stack([x.ravel(),y.ravel(),z.ravel()])
     node_line='!\n coordinates\n *echo off\n'
     for i in range(nnode**3):
-        node_line +='%d %7.3f %7.3f %7.3f\n'%(node_indx[i],nodes[i,0],nodes[i,1],nodes[i,2])
+        node_line +='    %d %7.3f %7.3f %7.3f\n'%(node_indx[i],nodes[i,0],nodes[i,1],nodes[i,2])
     elset_3d=np.reshape(np.arange(1,ndim**3+1),(ndim,ndim,ndim))
     nset_3d=np.reshape(np.arange(1,nnode**3+1),(nnode,nnode,nnode))
     #Corners
@@ -137,7 +137,7 @@ if __name__=="__main__":
     
     #Instantiating element array and defining connectivities for the continuum elements zone
     elements=np.ndarray([ndim**3, 9],dtype=np.int32)
-    element_line="*echo on\n incidences\n*echo off"
+    element_line="*echo on\n incidences\n*echo off \n"
     index=0
     
     for i in range(ndim):
@@ -152,6 +152,7 @@ if __name__=="__main__":
                                             j+1+i*nnode+(k+1)*nnode**2,\
                                             j+1+(i+1)*nnode+(k+1)*nnode**2,\
                                             j+(i+1)*nnode+(k+1)*nnode**2])
+                element_line +='    '
                 element_line +=' '.join(str(elements[index,:]+1)[1:-1].split())
                 element_line +='\n'
                 index=index+1
@@ -164,6 +165,7 @@ if __name__=="__main__":
     f.write(node_line)
     
     f.write(element_line)
+    f.close()
     
 
     
